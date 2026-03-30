@@ -15,7 +15,7 @@ Built open-source real-time simulation systems based on MATLAB/Simulink for mult
 
 ---
 
-#### Autonomous landing on a moving ship | VTOL QuadPlane
+#### 2019 - Autonomous landing on a moving ship | VTOL QuadPlane
 
 Developed autonomous helipad detection and vertical landing system for a VTOL QuadPlane UAV on a moving ship platform using computer vision.
 
@@ -46,7 +46,7 @@ Developed autonomous helipad detection and vertical landing system for a VTOL Qu
 }
 </style>
 
-#### Inverted V-tail fixed-wing UAV | Flight control algorithm
+#### 2017 - Inverted V-tail fixed-wing UAV | Flight control algorithm
 
 Created modelling and flight control algorithms for an inverted V-tail fixed-wing UAV.
 
@@ -60,13 +60,13 @@ Created modelling and flight control algorithms for an inverted V-tail fixed-win
 {% include youtube.html id="nRjGNcmNFgE" title="Waypoint tracking for fixed-wing" %}
 
 ---
-#### Real-time 3D simulator based on MATLAB/Simulink for multirotor
+#### 2015 - Real-time 3D simulator based on MATLAB/Simulink for multirotor
 
 {% include youtube.html id="n98vCGBCDxg" title="Waypoint multicopter simulation" %}
 
 ---
 
-#### IoT-SCADA System
+#### 2016 - IoT-SCADA System
 
 Designed and built a lightweight IoT-SCADA system supporting monitoring and control of multiple devices concurrently via the internet, easy to deploy, customisable for various applications, and ready for expansion or upgrade.
 

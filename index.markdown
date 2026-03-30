@@ -59,3 +59,9 @@ All journal articles are Q1 and all first-authored. See [Google Scholar](https:/
 - **Brover**: Autonomous ground robot with multimodal sensing (RGB-D, thermal) and AI-powered interface (NVIDIA Academic Grant ~$25K AUD)
 - **Autonomous Target Tracking**: Detection and tracking of moving ground targets, validated through simulation-to-deployment pipelines
 - **Precision Landing on Moving Platforms**: Vision-based autonomous landing system
+
+---
+
+## :moneybag: Grants
+
+- **NVIDIA Academic Grant** (2026) - Hardware resource support valued at ~**25,000 AUD** for the Brover intelligent ground robot project

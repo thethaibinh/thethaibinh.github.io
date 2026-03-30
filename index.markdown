@@ -64,4 +64,4 @@ All journal articles are Q1 and all first-authored. See [Google Scholar](https:/
 
 ## :moneybag: Grants
 
-- **NVIDIA Academic Grant** (2026) - Hardware resource support valued at ~**25,000 AUD** for the Brover intelligent ground robot project
+- **NVIDIA Academic Grant** (2026) - Unrestricted gift to UNSW in support of the EywaGuard (Brover) project: **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**

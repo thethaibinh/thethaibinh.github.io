@@ -7,4 +7,4 @@ categories: news
 tags: robotics brover nvidia grant
 ---
 
-Secured an **NVIDIA Academic Grant** providing hardware resource support valued at approximately **25,000 AUD** for the **Brover** intelligent ground robot project.
+Secured an **NVIDIA Academic Grant** - an unrestricted gift to UNSW in support of the **Brover** project, providing **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**.

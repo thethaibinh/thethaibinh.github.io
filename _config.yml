@@ -1,0 +1,88 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+title: Binh Nguyen
+email: thethaibinh@gmail.com
+description: >-
+  Robotics Scientist and Tech Lead with ten years of experience
+  in simulation, validation, and digital-twin infrastructure for safety-critical
+  autonomous platforms across defence, aerospace, and commercial robotics.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://thethaibinh.github.io" # the base hostname & protocol for your site
+favicon: /assets/img/profile.jpg
+github_username: thethaibinh
+repository: thethaibinh/thethaibinh.github.io
+
+# Build settings
+theme: jekyll-theme-profile
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jemoji
+
+# ########### Theme settings ###############
+# Style: one of "stacked", "sidebar", "topbar", "appbar"
+style: sidebar
+
+# Profile avatar
+user_image: /assets/img/profile.jpg
+
+# Dark/light theme options
+dark_theme: dark
+light_theme: light
+
+# Show GitHub repo info and user metadata
+repo_info: false
+user_metadata: false
+profile_link: false
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      toc: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Navigation links
+nav:
+  - name: ABOUT
+    url: /
+  - name: EXPERIENCE
+    url: /experience/
+  - name: NEWS
+    url: /news/
+  - name: PUBLICATIONS
+    url: /publications/
+  - name: CONTACT
+    url: /contact/
+
+# Social media
+social_media:
+  github: thethaibinh
+  linkedin: thethaibinh
+  google_scholar: 8osTCJEAAAAJ
+  orcid: 0000-0003-2942-9014
+  unsw: https://research.unsw.edu.au/people/mr-binh-nguyen
+  airlab: https://air-cbr.github.io/team.html
+
+# No link cards or repositories on homepage

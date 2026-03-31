@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Autonomous Navigation with Natural Language Commands & Deterministic Safety"
+title: "Fly-by-Voice: Autonomous Navigation with Natural Language Commands & Deterministic Safety"
 date: 2026-01-31 10:00:00 +1100
 categories: experience
 tags: robotics navigation VLM safety drones

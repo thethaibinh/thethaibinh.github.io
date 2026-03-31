@@ -15,7 +15,7 @@ He currently leads system development for a decentralised drone swarm framework 
 **Doctor of Philosophy** | Robotics & AI  
 [Federation University Australia](https://www.federation.edu.au/), Churchill, Victoria, Australia  
 May 2022 – Oct 2025  
-Thesis recommended for a **Dean's Excellence Award** by an independent external examiner.
+Thesis recommended for a **Dean's Excellence Award** by an independent external examiner. [[Examiner Report]](/assets/pdf/examiner-report.pdf)
 
 **Bachelor of Engineering (Honours)** | Electronics & Communication Engineering  
 [Hanoi University of Science and Technology (HUST)](https://hust.edu.vn/en/), Hanoi, Vietnam  
@@ -55,14 +55,14 @@ All journal articles are Q1 and all first-authored. See [Google Scholar](https:/
 
 ## :rocket: Featured Projects
 
-- **ROS2 Swarming Digital Twin**: Full-stack simulation and digital twin system with CI/CD validation pipelines onto real hardware
-- **Fly-by-Voice**: VLM-powered autonomous navigation with natural language command interfaces and deterministic safety guarantees
-- **Brover**: Autonomous ground robot with multimodal sensing (RGB-D, thermal) and AI-powered interface (NVIDIA Academic Grant ~$25K AUD)
-- **Autonomous Target Tracking**: Detection and tracking of moving ground targets, validated through simulation-to-deployment pipelines
-- **Precision Landing on Moving Platforms**: Vision-based autonomous landing system
+- **[ROS2 Swarming Digital Twin](/experience/2025/10/01/drone-swarming-digital-twin.html)**: Full-stack simulation and digital twin system with CI/CD validation pipelines onto real hardware
+- **[Fly-by-Voice](/experience/2026/01/31/vlm-guided-navigation.html)**: VLM-powered autonomous navigation with natural language command interfaces and deterministic safety guarantees
+- **[Brover](/experience/2025/06/01/building-brover.html)**: Autonomous ground robot with multimodal sensing (RGB-D, thermal) and AI-powered interface (NVIDIA Academic Grant ~$25K AUD)
+- **[Autonomous Target Tracking](/experience/2022/08/30/hera-quadrotor.html#tracking-ground-vehicle-by-quadrotor)**: Detection and tracking of moving ground targets, validated through simulation-to-deployment pipelines
+- **[Precision Landing on Moving Platforms](/experience/2014/05/31/multirotor-simulator.html#2019---autonomous-landing-on-a-moving-ship--vtol-quadplane)**: Vision-based autonomous landing system
 
 ---
 
 ## :moneybag: Grants
 
-- **NVIDIA Academic Grant** (2026) - Unrestricted gift to UNSW in support of the Brover project: **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**
+- **[NVIDIA Academic Grant](/news/2026/03/14/nvidia-academic-grant.html)** (2026) - Unrestricted gift to UNSW in support of the Brover project: **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**

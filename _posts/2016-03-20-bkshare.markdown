@@ -1,0 +1,29 @@
+---
+layout: post
+title: "BK-Share Student Programming Club"
+date: 2016-03-20 10:00:00 +0700
+categories: news
+tags: teaching programming community
+image: /assets/img/posts/bkshare/bkshare-1.jpg
+---
+
+BK-Share is a club I founded back in 2016 at Hanoi University of Science and Technology, born from a simple idea: creating a community where engineering students could sharpen their programming skills together.
+
+There was one class "Computational Programming and Simulation with MATLAB/Simulink" and two "Microcontroller Programming and Fundamental Circuit Design" organized, serving more than 60 undergraduate students across various fields in the campus.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+    <img src="/assets/img/posts/bkshare/bkshare-1.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-2.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-3.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-4.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-5.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-6.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-7.jpg" alt="BK-Share class" />
+    <img src="/assets/img/posts/bkshare/bkshare-8.jpg" alt="BK-Share class" />
+</div>
+
+<br>
+Slide preview
+<object data="/assets/pdf/MC02.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Unable to display PDF. <a href="/assets/pdf/MC02.pdf">Download the slide</a>.</p>
+</object>

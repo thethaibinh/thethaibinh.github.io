@@ -5,7 +5,7 @@ subtitle: "Jun 2014 - Jan 2022"
 date: 2014-06-01 10:00:00 +1100
 categories: experience
 tags: drones multirotor simulation matlab flight-control hust research iot scada
-image: /assets/img/posts/helipad.png
+image: /assets/img/posts/landing.png
 ---
 
 Joined the Aerospace Electronics Laboratory at Hanoi University of Science and Technology (HUST) as Research Assistant and UAV Team Lead (Aug 2014 - Jan 2022). Led research on stability and control algorithms for various aerial vehicle configurations, and mentored junior researchers on aerial systems, embedded development, and scientific writing.

@@ -43,7 +43,7 @@ image: /assets/img/posts/uav/vtail-v2-3.jpg
   <img src="/assets/img/posts/uav/htail2.jpg" alt="H-tail fixed wing UAV - photo 2">
   <img src="/assets/img/posts/uav/htail3.jpg" alt="H-tail fixed wing UAV - photo 3">
   <img src="/assets/img/posts/uav/htail-sim.png" alt="H-tail fixed wing UAV - simulation model">
-  <figcaption>H-tail fixed wing UAV and its simulation model</figcaption>
+  <figcaption>H-tail fixed wing UAV and its digital-twin model</figcaption>
 </div>
 
 #### 2018 - Inverted V-tail VTOL QuadPlane v1
@@ -52,7 +52,7 @@ image: /assets/img/posts/uav/vtail-v2-3.jpg
   <img src="/assets/img/posts/uav/vtail-v1-2.png" alt="V-tail VTOL QuadPlane v1 - photo 2">
   <img src="/assets/img/posts/uav/vtail-v1-3.png" alt="V-tail VTOL QuadPlane v1 - photo 3">
   <img src="/assets/img/posts/uav/vtail-v1-sim.png" alt="V-tail VTOL QuadPlane v1 - simulation model">
-  <figcaption>Inverted V-tail VTOL QuadPlane v1 and its simulation model</figcaption>
+  <figcaption>Inverted V-tail VTOL QuadPlane v1 and its digital-twin model</figcaption>
 </div>
 
 #### 2019 - Inverted V-tail VTOL QuadPlane v2
@@ -61,7 +61,7 @@ image: /assets/img/posts/uav/vtail-v2-3.jpg
   <img src="/assets/img/posts/uav/vtail-v2-2.jpg" alt="V-tail VTOL QuadPlane v2 - photo 2">
   <img src="/assets/img/posts/uav/vtail-v2-3.jpg" alt="V-tail VTOL QuadPlane v2 - photo 3">
   <img src="/assets/img/posts/uav/vtail-v2-sim.png" alt="V-tail VTOL QuadPlane v2 - simulation model">
-  <figcaption>Inverted V-tail VTOL QuadPlane v2 and its simulation model</figcaption>
+  <figcaption>Inverted V-tail VTOL QuadPlane v2 and its digital-twin model</figcaption>
 </div>
 
 #### 2020 - U-tail VTOL QuadPlane
@@ -70,7 +70,7 @@ image: /assets/img/posts/uav/vtail-v2-3.jpg
   <img src="/assets/img/posts/uav/utail2.jpg" alt="U-tail VTOL QuadPlane - photo 2">
   <img src="/assets/img/posts/uav/utail3.jpg" alt="U-tail VTOL QuadPlane - photo 3">
   <img src="/assets/img/posts/uav/utail-sim.png" alt="U-tail VTOL QuadPlane - simulation model">
-  <figcaption>U-tail VTOL QuadPlane and its simulation model</figcaption>
+  <figcaption>U-tail VTOL QuadPlane and its digital-twin model</figcaption>
 </div>
 
 #### 2021 - Fixed Wing (Loitering Munition)
@@ -79,5 +79,5 @@ image: /assets/img/posts/uav/vtail-v2-3.jpg
   <img src="/assets/img/posts/uav/lmfw2.jpg" alt="Loitering munition fixed wing - photo 2">
   <img src="/assets/img/posts/uav/lmfw3.jpg" alt="Loitering munition fixed wing - photo 3">
   <img src="/assets/img/posts/uav/lmfw-sim.png" alt="Loitering munition fixed wing - simulation model">
-  <figcaption>Fixed wing loitering munition and its simulation model</figcaption>
+  <figcaption>Fixed wing loitering munition and its digital-twin model</figcaption>
 </div>

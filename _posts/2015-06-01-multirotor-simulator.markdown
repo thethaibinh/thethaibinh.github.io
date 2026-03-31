@@ -17,10 +17,6 @@ Built open-source real-time simulation systems based on MATLAB/Simulink for mult
 
 #### 2019 - Autonomous landing on a moving ship | VTOL QuadPlane
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0.8em 0 1.6em;">
-{% include youtube.html id="pQTsZe32zuY" title="Autonomous approach and landing on frigate for VTOL UAV" %}
-{% include youtube.html id="vWO1uPcWGmg" title="Autonomous helipad detection and landing on ship" %}
-</div>
 {% include youtube.html id="pQTsZe32zuY" title="Autonomous approach and landing on frigate for VTOL UAV" %}
 {% include youtube.html id="vWO1uPcWGmg" title="Autonomous helipad detection and landing on ship" %}
 ---

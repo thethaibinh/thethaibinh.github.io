@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Embedded Software Engineer | Swoop Aero"
-date: 2023-06-01 10:00:00 +1100
+date: 2022-11-09 10:00:00 +1100
+description: "Nov 2022 - Jun 2023"
 image: /assets/img/posts/swoop.avif
 categories: experience
 tags: industry drones flight-control swoop-aero embedded c++ rtos

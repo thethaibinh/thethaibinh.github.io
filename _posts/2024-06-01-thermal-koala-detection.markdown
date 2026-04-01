@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Koala Detection & Tracking System | Federation University"
-date: 2025-04-01 10:00:00 +1100
+date: 2024-06-01 10:00:00 +1100
+description: "Jun 2024 - Jun 2025"
 categories: experience
 tags: robotics computer-vision thermal wildlife sensor-fusion
 image: /assets/img/posts/koala-detection-system.jpg

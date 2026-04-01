@@ -3,6 +3,7 @@ layout: post
 title: "UAV Team Lead | ASE Lab @ HUST (Vietnam)"
 subtitle: "Jun 2014 - Jan 2022"
 date: 2014-06-01 10:00:00 +1100
+description: "Jun 2014 - Jun 2022"
 categories: experience
 tags: drones multirotor simulation matlab flight-control hust research iot scada
 image: /assets/img/posts/landing.png

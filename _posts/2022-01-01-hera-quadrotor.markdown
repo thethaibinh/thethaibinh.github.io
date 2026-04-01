@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Autopilot Lead Engineer | Realtime Robotics"
-date: 2022-08-31 10:00:00 +1100
+date: 2022-01-01 10:00:00 +1100
+description: "Jan 2022 - Aug 2022"
 categories: experience
 tags: industry drones flight-control search-rescue ai vision navigation
 image: /assets/img/posts/hera-quadrotor.jpg

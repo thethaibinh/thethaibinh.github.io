@@ -10,7 +10,7 @@ image: /assets/img/posts/brotor/lab-setup.jpg
 
 As part of my PhD in Robotics & AI at Federation University (May 2022 - Jun 2025), I established the Intelligent Drone Laboratory, the first indoor flight facility at the university, later [featured on 7News](https://storage.googleapis.com/streem-tv-clips-au/2025-11-05/tv_118_1762343316_1762343345.mp4) and [Federation University](https://www.federation.edu.au/about/news/news/indoor-flight-lab-clears-the-way-for-advanced-aerial-robotics/), from concept to fully operational testing and validation infrastructure. Built **Brotor**, a custom quadrotor research platform to support real-time trajectory planning research in cluttered environments.
 
-For details on the research outcomes, see [Publications](/publications/).
+Please refer to [Publications](/publications/) for details on the research outcomes.
 
 ## Intelligent Drone Laboratory
 

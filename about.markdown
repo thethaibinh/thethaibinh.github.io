@@ -43,7 +43,7 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 ## :books: Selected Publications
 
-All journal articles are Q1 and all first-authored. See [Google Scholar](https://scholar.google.com/citations?user=8osTCJEAAAAJ) · [ORCID](https://orcid.org/0000-0003-2942-9014) · [IEEE](https://ieeexplore.ieee.org/author/316717000701112) for the full list.
+All journal articles are Q1 and all first-authored without other student co-authors. See [Google Scholar](https://scholar.google.com/citations?user=8osTCJEAAAAJ) · [ORCID](https://orcid.org/0000-0003-2942-9014) · [IEEE](https://ieeexplore.ieee.org/author/316717000701112) for the full list.
 
 1. **Binh Nguyen**, et al., "[Non-Conservative Efficient Collision Checking and Depth Noise-Awareness for Trajectory Planning](https://ieeexplore.ieee.org/document/11037478)," ***IEEE Robotics and Automation Letters***, vol. 10, no. 8, pp. 7859–7866, Aug. 2025. (Ranked #1 in Robotics by [Google Scholar Metrics](https://scholar.google.com.au/citations?view_op=top_venues&hl=en&vq=eng_robotics); invited to present at **ICRA 2026**).
 

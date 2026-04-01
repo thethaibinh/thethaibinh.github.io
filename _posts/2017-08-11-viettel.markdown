@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Autopilot Software Developer & Flight Simulation Lead | Viettel"
-date: 2022-01-31 10:00:00 +1100
+date: 2017-08-11 10:00:00 +1100
+description: "Aug 2017 - Jan 2022"
 categories: experience
 tags: simulation flight-control sil hil digital-twin viettel defence
 image: /assets/img/posts/uav/vtail-v2-3.jpg

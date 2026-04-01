@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Decentralised Drone Swarm Sytem with Digital-twin Infrastructure | UNSW Canberra"
-date: 2025-07-01 10:00:00 +1100
+date: 2025-07-01 23:00:00 +1100
 description: "Jul 2025 - Dec 2026"
 categories: experience
 tags: robotics swarming drones digital-twin simulation ros2 defence

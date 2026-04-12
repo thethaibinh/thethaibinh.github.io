@@ -24,6 +24,95 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 ---
 
+## :briefcase: Experience
+
+**Research Associate · Technical Lead**
+[UNSW Canberra](https://research.unsw.edu.au/people/mr-binh-nguyen) — Northcott Dr, Campbell ACT 2612 (Full-time · On-site)
+July 2025 – Present
+
+- **Leading systems development** for a decentralised drone swarm framework for [Defence applications](https://dtb.solutions/news/announcement/akula-tech-and-unsw-team-up-on-autonomous-adaptive-swarm-intelligence-project/), with end-to-end responsibility from architecture through integration, testing, deployment, and handover to industry stakeholders.
+  - Architected a **modular, scalable software stack using ROS2**, enabling reusable integration across navigation, perception, communication, and task allocation subsystems with CI/CD pipelines from simulation to real hardware.
+  - Built and maintained a **full-stack simulation infrastructure** (digital twin) based on ROS2 and NVIDIA Isaac Sim for development, integration testing, and validation, analogous to a flatsat environment.
+  - **Leading cross-discipline integration** across embedded software, hardware, sensor payloads, localisation systems, and communication links, ensuring end-to-end validation through ground and flight testing.
+  - Designed swarm testing scenarios, operational safety protocols, and human-swarm interaction interfaces; **mentoring** Defence undergraduate students on swarm simulation research.
+- **Key Achievements**:
+  - Designed, procured, built, and successfully flight-tested a [complete quadrotor swarm platform from scratch within three months]({% post_url 2025-07-01-drone-swarming-digital-twin %}), demonstrating rapid iterative build-test-refine cycles.
+  - Delivered a [full-stack ROS2-based simulation and digital twin infrastructure]({% post_url 2025-07-01-drone-swarming-digital-twin %}) supporting seamless CI/CD from simulation onto real-world hardware.
+  - Obtained CASA certifications ([RePL]({% post_url 2025-09-15-casa-certification %}), [AROC]({% post_url 2025-09-15-casa-certification %})) on first attempt.
+
+---
+
+**Research Associate · Technical Lead**
+[Federation University Australia](https://www.federation.edu.au/about/news/news/ai-tech-to-enable-real-time-koala-detection-in-forestry-operations/) — Churchill, Victoria, Australia (Part-time · On-site)
+June 2024 – June 2025
+
+- **Led end-to-end architecture** for a [multi-sensor tracking system](https://federation.edu.au/news/articles/ai-tech-to-enable-real-time-koala-detection-in-forestry-operations) to protect koalas during forestry operations in Victoria, owning system design and cross-discipline integration across mechanical, electrical, and software teams, from specification through field qualification.
+  - Specified, procured, and integrated the complete sensor-actuator chain — thermal cameras, laser range finders, gimbal systems, embedded controllers, and GNSS modules — **validated through lab and field testing**.
+  - Developed **telemetry and command interfaces** for real-time thermal video streaming and target data exchange between onboard systems and the ground control station.
+  - Developed gimbal control algorithms, AI-powered object detection, and target localisation through **sensor fusion** (laser + GNSS).
+- **Achievement**: Delivered a [complete integrated tracking system]({% post_url 2024-06-01-thermal-koala-detection %}) with autonomous target following and real-time telemetry, successfully qualified through field testing at an operational plantation.
+
+---
+
+**Embedded Software Engineer**
+[Swoop Aero](https://swoop.aero/) — Port Melbourne, Victoria, Australia (Full-time · Hybrid)
+Nov 2022 – June 2023
+
+- Developing **mission-critical flight software** for [production aerial drone platforms](https://swoop.aero/solutions/) (1.6M+ items delivered, 6.0M+ people served globally) on RTOS/Embedded Linux. Conducting R&D for smart flight features with rapid iterative development cycles.
+- **Achievement**: Delivered flight software for [vision-based autonomous takeoff and landing on moving platforms]({% post_url 2023-06-01-kite-swoop-aero %}) (e.g., ship decks), integrating real-time sensor processing, state estimation, and **autonomous decision-making under dynamic conditions**.
+
+---
+
+**PhD Candidate · Robotics & AI — GNC Algorithms**
+[Federation University Australia](https://www.federation.edu.au/) — Churchill, Victoria, Australia (Full-time · On-site)
+May 2022 – June 2025
+
+- **Research Focus**: Developed novel **real-time GNC algorithms** for autonomous aerial navigation under sensor uncertainty, validated through extensive **simulation-based testing** with iterative design-build-test-refine cycles. Research Portfolio: [thethaibinh.github.io/publications](https://thethaibinh.github.io/publications/)
+- **Achievements**:
+  - Published research in IEEE Robotics and Automation Letters (ranked #1 in Robotics by [Google Scholar](https://scholar.google.com.au/citations?view_op=top_venues&hl=en&vq=eng_robotics)).
+  - Established the [Intelligent Drone Laboratory]({% post_url 2022-05-01-intelligent-drone-lab %}), the first and only indoor flight facility at Federation University, from concept to fully operational research infrastructure.
+
+---
+
+**Autopilot Lead Engineer**
+[Realtime Robotics](https://thethaibinh.github.io/experience/2021/12/31/hera-quadrotor.html) — Vietnam (Full-time · Hybrid)
+Jan 2022 – August 2022
+
+- **Led a multidisciplinary team** (software, hardware, operations) to deliver an AI-powered vision-based navigation and object localisation system for UAVs **from concept through integration and deployment**, for agricultural applications and [search-and-rescue operations]({% post_url 2022-01-01-hera-quadrotor %}).
+
+---
+
+**Autopilot Software Developer · Flight Simulation Lead**
+[Viettel Aerospace Institute](https://vtx.vn/) & [Viettel High Tech](https://viettelhightech.vn/en/category-product/unmanned-aircraft) — Hanoi, Vietnam (Full-time · On-site)
+August 2017 – January 2022
+
+- **Responsibilities**:
+  - Developed **real-time flight software in C/C++** for multiple vehicle configurations across product generations, including **GNC algorithms** (guidance, navigation, control), motor control, and EKF-based state estimation (AHRS and GNSS/INS navigation).
+  - Implemented **telemetry, command, and data handling** systems including real-time data logging, ground control station communication, and remote software configuration.
+  - Led development of **FDIR (Fault Detection, Isolation and Response)** logic for autonomous recovery from vehicle anomalies including GNSS jamming/outage, communication loss, and sensor failures.
+  - Owned the **SIL/HIL simulation infrastructure** for flight software development and testing across all vehicle configurations, using X-Plane with realistic visualisation.
+  - Created all vehicle **digital-twin models** used for real-time testing and to inform iterative airframe and system design.
+- **Achievements**:
+  - Delivered a complete **production flight software stack** with advanced autonomy features, including VTOL-to-Fixed-wing transition control and **autonomous FDIR** for critical scenarios such as GNSS jamming, sensor failure, and communication loss.
+  - Delivered digital-twin models and flight software for [**all vehicle configurations across five years** (2017–2022)]({% post_url 2017-08-11-viettel %}), including pan-tilt gimbal/tracker, Quadrotor, VTOL QuadPlane, Fixed-wing, Folded-wing, and Launcher/Jet-assisted take-off vehicles across all product versions.
+  - Built a complete **SIL/HIL simulation infrastructure** from scratch, establishing the development and testing environment for all flight software across the organisation.
+
+---
+
+**Research Assistant · UAV Team Lead**
+[ASE Laboratory, HUST](https://seee.hust.edu.vn/) — Hanoi, Vietnam (Part-time · Hybrid)
+May 2014 – January 2022
+
+- **Responsibilities**:
+  - Led research on stability and **GNC algorithms** for various aerial vehicle configurations.
+  - Designed embedded systems; full-stack software and electronics development for IoT–SCADA applications.
+  - **Mentored** junior researchers on aerial systems, embedded development, and scientific writing.
+- **Achievements**:
+  - An open-source **real-time simulation system** based on X-Plane and Ardupilot for VTOL QuadPlane with [autonomous precision landing on moving platforms]({% post_url 2014-06-01-multirotor-simulator %}#2019---autonomous-landing-on-a-moving-ship--vtol-quadplane).
+  - An open-source **real-time simulation system** based on MATLAB/Simulink with GNC algorithms for [multirotor aerial vehicles]({% post_url 2014-06-01-multirotor-simulator %}#2015---real-time-3d-simulator-based-on-matlabsimulink-for-multirotor).
+
+---
+
 ## :wrench: Engineering Skills
 
 - **Simulation & Virtual Validation:** SIL/HIL testing infrastructure design and deployment; digital-twin development (X-Plane, NVIDIA Isaac Sim, Unity, Gazebo, MATLAB/Simulink); CI/CD validation pipelines; test automation; systematic failure mode analysis

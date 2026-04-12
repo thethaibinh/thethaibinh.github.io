@@ -26,9 +26,9 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 ## :briefcase: Experience
 
-**Research Associate · Technical Lead**
-[UNSW Canberra](https://research.unsw.edu.au/people/mr-binh-nguyen) — Northcott Dr, Campbell ACT 2612 (Full-time · On-site)
-July 2025 – Present
+### Research Associate \| Technical Lead @ [UNSW Canberra](https://research.unsw.edu.au/people/mr-binh-nguyen) 
+Canberra, ACT, Australia (Full-time | On-site) \\
+July 2025 - Present 
 
 - **Leading systems development** for a decentralised drone swarm framework for [Defence applications](https://dtb.solutions/news/announcement/akula-tech-and-unsw-team-up-on-autonomous-adaptive-swarm-intelligence-project/), with end-to-end responsibility from architecture through integration, testing, deployment, and handover to industry stakeholders.
   - Architected a **modular, scalable software stack using ROS2**, enabling reusable integration across navigation, perception, communication, and task allocation subsystems with CI/CD pipelines from simulation to real hardware.
@@ -42,30 +42,30 @@ July 2025 – Present
 
 ---
 
-**Research Associate · Technical Lead**
-[Federation University Australia](https://www.federation.edu.au/about/news/news/ai-tech-to-enable-real-time-koala-detection-in-forestry-operations/) — Churchill, Victoria, Australia (Part-time · On-site)
-June 2024 – June 2025
+### Research Associate \| Technical Lead @ [Federation University Australia](https://www.federation.edu.au/about/news/news/ai-tech-to-enable-real-time-koala-detection-in-forestry-operations/) 
+Churchill, Victoria, Australia (Part-time | On-site) \\
+June 2024 - June 2025 
 
-- **Led end-to-end architecture** for a [multi-sensor tracking system](https://federation.edu.au/news/articles/ai-tech-to-enable-real-time-koala-detection-in-forestry-operations) to protect koalas during forestry operations in Victoria, owning system design and cross-discipline integration across mechanical, electrical, and software teams, from specification through field qualification.
-  - Specified, procured, and integrated the complete sensor-actuator chain — thermal cameras, laser range finders, gimbal systems, embedded controllers, and GNSS modules — **validated through lab and field testing**.
+- **Led end-to-end architecture** for a [multi-sensor tracking system]({% post_url 2024-06-01-thermal-koala-detection %}) to protect koalas during forestry operations in Victoria, owning system design and cross-discipline integration across mechanical, electrical, and software teams, from specification through field qualification.
+  - Specified, procured, and integrated the complete sensor-actuator chain: thermal cameras, laser range finders, gimbal systems, embedded controllers, and GNSS modules, **validated through lab and field testing**.
   - Developed **telemetry and command interfaces** for real-time thermal video streaming and target data exchange between onboard systems and the ground control station.
   - Developed gimbal control algorithms, AI-powered object detection, and target localisation through **sensor fusion** (laser + GNSS).
 - **Achievement**: Delivered a [complete integrated tracking system]({% post_url 2024-06-01-thermal-koala-detection %}) with autonomous target following and real-time telemetry, successfully qualified through field testing at an operational plantation.
 
 ---
 
-**Embedded Software Engineer**
-[Swoop Aero](https://swoop.aero/) — Port Melbourne, Victoria, Australia (Full-time · Hybrid)
-Nov 2022 – June 2023
+### Embedded Software Engineer @ [Swoop Aero](https://swoop.aero/) 
+Melbourne, Australia (Full-time | Hybrid) \\
+Nov 2022 - June 2023 
 
 - Developing **mission-critical flight software** for [production aerial drone platforms](https://swoop.aero/solutions/) (1.6M+ items delivered, 6.0M+ people served globally) on RTOS/Embedded Linux. Conducting R&D for smart flight features with rapid iterative development cycles.
 - **Achievement**: Delivered flight software for [vision-based autonomous takeoff and landing on moving platforms]({% post_url 2023-06-01-kite-swoop-aero %}) (e.g., ship decks), integrating real-time sensor processing, state estimation, and **autonomous decision-making under dynamic conditions**.
 
 ---
 
-**PhD Candidate · Robotics & AI — GNC Algorithms**
-[Federation University Australia](https://www.federation.edu.au/) — Churchill, Victoria, Australia (Full-time · On-site)
-May 2022 – June 2025
+### PhD Candidate \| Robotics & AI @ [Federation University Australia](https://www.federation.edu.au/) 
+Churchill, Victoria, Australia (Full-time | On-site) \\
+May 2022 - June 2025 
 
 - **Research Focus**: Developed novel **real-time GNC algorithms** for autonomous aerial navigation under sensor uncertainty, validated through extensive **simulation-based testing** with iterative design-build-test-refine cycles. Research Portfolio: [thethaibinh.github.io/publications](https://thethaibinh.github.io/publications/)
 - **Achievements**:
@@ -74,17 +74,18 @@ May 2022 – June 2025
 
 ---
 
-**Autopilot Lead Engineer**
-[Realtime Robotics](https://thethaibinh.github.io/experience/2021/12/31/hera-quadrotor.html) — Vietnam (Full-time · Hybrid)
-Jan 2022 – August 2022
+### Autopilot Lead Engineer @ [Realtime Robotics](https://thethaibinh.github.io/experience/2021/12/31/hera-quadrotor.html) 
+Vietnam (Full-time | Hybrid) \\
+Jan 2022 - August 2022 
 
 - **Led a multidisciplinary team** (software, hardware, operations) to deliver an AI-powered vision-based navigation and object localisation system for UAVs **from concept through integration and deployment**, for agricultural applications and [search-and-rescue operations]({% post_url 2022-01-01-hera-quadrotor %}).
 
 ---
 
-**Autopilot Software Developer · Flight Simulation Lead**
-[Viettel Aerospace Institute](https://vtx.vn/) & [Viettel High Tech](https://viettelhightech.vn/en/category-product/unmanned-aircraft) — Hanoi, Vietnam (Full-time · On-site)
-August 2017 – January 2022
+### Autopilot Software Developer \| Flight Simulation Lead @ [Viettel Aerospace Institute](https://viettelaerospace.vn/en) & [Viettel High Tech](https://viettelhightech.vn/en/category-product/unmanned-aircraft) 
+
+Hanoi, Vietnam (Full-time | On-site) \\
+August 2017 - January 2022 
 
 - **Responsibilities**:
   - Developed **real-time flight software in C/C++** for multiple vehicle configurations across product generations, including **GNC algorithms** (guidance, navigation, control), motor control, and EKF-based state estimation (AHRS and GNSS/INS navigation).
@@ -99,13 +100,14 @@ August 2017 – January 2022
 
 ---
 
-**Research Assistant · UAV Team Lead**
-[ASE Laboratory, HUST](https://seee.hust.edu.vn/) — Hanoi, Vietnam (Part-time · Hybrid)
-May 2014 – January 2022
+### Research Assistant \| UAV Team Lead @ [ASE Laboratory, HUST](https://research.hust.edu.vn/seee-lab-aerospace-electronics-lab)
+
+Hanoi, Vietnam (Part-time | Hybrid) \\
+May 2014 - January 2022
 
 - **Responsibilities**:
   - Led research on stability and **GNC algorithms** for various aerial vehicle configurations.
-  - Designed embedded systems; full-stack software and electronics development for IoT–SCADA applications.
+  - Designed embedded systems; full-stack software and electronics development for [IoT-SCADA applications]({% post_url 2014-06-01-multirotor-simulator %}#2016---iot-scada-system).
   - **Mentored** junior researchers on aerial systems, embedded development, and scientific writing.
 - **Achievements**:
   - An open-source **real-time simulation system** based on X-Plane and Ardupilot for VTOL QuadPlane with [autonomous precision landing on moving platforms]({% post_url 2014-06-01-multirotor-simulator %}#2019---autonomous-landing-on-a-moving-ship--vtol-quadplane).
@@ -126,7 +128,7 @@ May 2014 – January 2022
 
 ## :trophy: Professional Certifications
 
-- Remote Pilot Licence (RePL) & Aeronautical Radio Operator Certificate (AROC), issued by Civil Aviation Safety Authority (2025)
+- Remote Pilot Licence ([RePL]({% post_url 2025-09-15-casa-certification %})) & Aeronautical Radio Operator Certificate ([AROC]({% post_url 2025-09-15-casa-certification %})), issued by Civil Aviation Safety Authority (2025).
 
 ---
 

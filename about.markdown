@@ -49,7 +49,7 @@ He currently leads system development for a decentralised drone swarm framework 
 **Doctor of Philosophy** | Robotics & AI  
 [Federation University Australia](https://www.federation.edu.au/), Churchill, Victoria, Australia  
 May 2022 – Oct 2025  
-Thesis recommended for a **Dean's Excellence Award** by an independent external examiner. [[Examiner Report]](/assets/pdf/examiner-report.pdf)
+Thesis recommended for a **Dean's Excellence Award** by an independent external examiner. [[Thesis]](http://researchonline.federation.edu.au/vital/access/HandleResolver/1959.17/209574) [[Examiner Report]](/assets/pdf/examiner-report.pdf)
 
 **Bachelor of Engineering (Honours)** | Electronics & Communication Engineering  
 [Hanoi University of Science and Technology (HUST)](https://hust.edu.vn/en/), Hanoi, Vietnam  

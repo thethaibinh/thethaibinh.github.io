@@ -18,6 +18,9 @@ layout: default
                             <img src="{{ image | relative_url }}" class="cover-image rounded-2"
                                 alt="{{ page.title }}" />
                         </div>
+                        {%- if page.image_caption %}
+                        <figcaption style="text-align:center; color:var(--fgColor-muted, #656d76); margin-top:6px;">{{ page.image_caption }}</figcaption>
+                        {%- endif %}
                     </div>
                 </div>
             </div>

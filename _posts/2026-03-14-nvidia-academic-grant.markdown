@@ -7,4 +7,4 @@ categories: news
 tags: robotics brover nvidia grant
 ---
 
-Secured an **NVIDIA Academic Grant** - an unrestricted gift to UNSW in support of the **Brover** project, providing **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**.
+Secured an **NVIDIA Academic Grant** - an unrestricted gift to UNSW in support of the **[Brover]({% post_url 2025-06-01-building-brover %})** project, providing **32K A100 GPU-Hours on Brev** and **2× Jetson AGX Orin Dev Kits**.

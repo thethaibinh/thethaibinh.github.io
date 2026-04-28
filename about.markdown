@@ -72,6 +72,7 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 - **Key Achievements**:
   - Designed, procured, built, and successfully flight-tested a [complete quadrotor swarm platform from scratch within three months]({% post_url 2025-07-01-drone-swarming-digital-twin %}), demonstrating rapid iterative build-test-refine cycles.
   - Delivered a [full-stack ROS2-based simulation and digital twin infrastructure]({% post_url 2025-07-01-drone-swarming-digital-twin %}) supporting seamless CI/CD from simulation onto real-world hardware.
+  - Developed [Fly-by-Voice]({% post_url 2026-01-31-vlm-guided-navigation %}), an Vision-Language Model (VLM) guided autonomous navigation framework with deterministic safety guarantees, enabling a robot to navigate safely through cluttered environments to semantic goals inferred from natural language commands, for example, “Fly to the chair!”. 
   - Obtained CASA certifications ([RePL]({% post_url 2025-09-15-casa-certification %}), [AROC]({% post_url 2025-09-15-casa-certification %})) on first attempt.
 
 </div>

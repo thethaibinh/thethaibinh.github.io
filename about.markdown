@@ -61,7 +61,16 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 ## :briefcase: Experience
 
 <details class="exp-item">
-<summary><span class="exp-title">Research Associate | Technical Lead @ <a href="https://research.unsw.edu.au/people/mr-binh-nguyen">UNSW Canberra</a></span><span class="exp-meta">Canberra, ACT, Australia (Full-time | On-site)<br>July 2025 - Present</span></summary>
+<summary><span class="exp-title">Principal Flight Software Engineer @ <a href="https://www.spacemachines.com">Space Machines Company</a></span><span class="exp-meta">Botany, New South Wales, Australia (Full-time | On-site)<br>May 2026 - Present</span></summary>
+<div class="exp-body" markdown="1">
+
+- Building the Autonomy Stack for Space Security.
+
+</div>
+</details>
+
+<details class="exp-item">
+<summary><span class="exp-title">Research Associate | Technical Lead @ <a href="https://research.unsw.edu.au/people/mr-binh-nguyen">UNSW Canberra</a></span><span class="exp-meta">Canberra, ACT, Australia (Full-time | On-site)<br>July 2025 - April 2026</span></summary>
 <div class="exp-body" markdown="1">
 
 - **Leading systems development** for a decentralised drone swarm framework for [Defence applications](https://dtb.solutions/news/announcement/akula-tech-and-unsw-team-up-on-autonomous-adaptive-swarm-intelligence-project/), with end-to-end responsibility from architecture through integration, testing, deployment, and handover to industry stakeholders.

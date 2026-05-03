@@ -40,7 +40,7 @@ permalink: /about/
 
 Binh Nguyen is a Robotics Scientist and Tech Lead with over ten years of experience across aerospace, defence, and commercial robotics, building safety-critical autonomous platforms from concept through deployment. His end-to-end technical leadership spans perception, planning, control, and digital-twin infrastructure, with a track record of leading multidisciplinary teams to deliver resilient autonomous systems. 
 
-He currently leads system development for a decentralised drone swarm framework for Defence applications at [UNSW Canberra](https://research.unsw.edu.au/people/mr-binh-nguyen), owning outcomes end-to-end from architecture through integration and field deployment.
+He is currently building a resilient Autonomy Stack for Space Security with [SMC](https://www.spacemachines.com/).
 
 ---
 

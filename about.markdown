@@ -76,7 +76,7 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 - **Leading systems development** for a decentralised drone swarm framework for [Defence applications](https://dtb.solutions/news/announcement/akula-tech-and-unsw-team-up-on-autonomous-adaptive-swarm-intelligence-project/), with end-to-end responsibility from architecture through integration, testing, deployment, and handover to industry stakeholders.
   - Architected a **modular, scalable software stack using ROS2**, enabling reusable integration across navigation, perception, communication, and task allocation subsystems with CI/CD pipelines from simulation to real hardware.
-  - Built and maintained a **full-stack simulation infrastructure** (digital twin) based on ROS2 and NVIDIA Isaac Sim for development, integration testing, and validation, analogous to a flatsat environment.
+  - Built and maintained a **full-stack simulation infrastructure** (digital twin) based on ROS2 and NVIDIA Isaac Sim for development, integration testing, and validation.
   - **Leading cross-discipline integration** across embedded software, hardware, sensor payloads, localisation systems, and communication links, ensuring end-to-end validation through ground and flight testing.
   - Designed swarm testing scenarios, operational safety protocols, and human-swarm interaction interfaces; **mentoring** Defence undergraduate students on swarm simulation research.
 - **Key Achievements**:

@@ -64,8 +64,9 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 <summary><span class="exp-title">Principal Flight Software Engineer @ <a href="https://www.spacemachines.com">Space Machines Company</a></span><span class="exp-meta">Botany, New South Wales, Australia (Full-time | On-site)<br>May 2026 - Present</span></summary>
 <div class="exp-body" markdown="1">
 
-- Leading flight software development for Optimus Viper, a Rapid Response Vehicle for Autonomous Proximity Operations. Researched and proposed a new architecture for flight software stack to better host safety-critical maneuvers and enable over-the-air update without interrupting service.
-- Built an AI-embedded automation system for embedded software development, driving entire CI/CD workflow with real target hardware from any device and anywhere.
+- **Leading flight software development** for Optimus Viper, a Rapid Response Vehicle for Autonomous Proximity Operations:
+  - Researched and proposed a new architecture for flight software stack to better host safety-critical maneuvers and enable over-the-air update without interrupting service.
+  - Researched and built an agentic coding system for embedded software development, driving entire CI/CD workflow with real target hardware from any device and anywhere.
 
 </div>
 </details>

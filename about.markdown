@@ -66,7 +66,7 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 - **Leading flight software development** for Optimus Viper, a Rapid Response Vehicle for Autonomous Proximity Operations:
   - Researched and proposed a **new architecture for flight software stack** to better host safety-critical maneuvers and enable over-the-air update without interrupting service.
-  - Researched and **built an agentic coding system for embedded software development**, driving entire CI/CD workflow with real target hardware from any device and anywhere.
+  - Researched and **built an agentic engineering system for embedded software development**, driving entire CI/CD workflow with real target hardware from any device and anywhere.
 
 </div>
 </details>

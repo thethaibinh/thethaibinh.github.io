@@ -65,7 +65,9 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 <div class="exp-body" markdown="1">
 
 - **Leading flight software development** for Optimus Viper, a Rapid Response Vehicle for Autonomous Proximity Operations:
-  - Researched and proposed a **new architecture for flight software stack** to better host safety-critical maneuvers and enable over-the-air update without interrupting service.
+  - Researched and proposed a **new architecture for the flight software stack** to better host safety-critical maneuvers and enable over-the-air update without interrupting service: an **asymmetric multiprocessing (AMP)** split on a **SoC**, running **RTOS** on an isolated core for the safety-critical control loop alongside **custom Linux** on the remaining cores for ground communication and payload, with cross-domain messaging over shared-memory IPC.
+  - Delivered **atomic over-the-air update** path for flight software: redundant A/B images with a known-good fallback and automatic rollback, so an interrupted or failed update can never leave the vehicle unbootable.
+  - Built the **flatsat / hardware-in-the-loop bench** and the **ground control station** end to end: flight attitude-control hardware on the same CAN link that flies, live telemetry into the operator console, and a browser-based **3D digital twin** rendering live attitude and orbit.
   - Researched and **built an agentic engineering system for embedded software development**, driving entire CI/CD workflow with real target hardware from any device and anywhere.
 
 </div>
@@ -170,12 +172,14 @@ Thesis recommended for a **Dean's Excellence Award** by an independent external 
 
 ## :wrench: Engineering Skills
 
-- **Simulation & Virtual Validation:** SIL/HIL testing infrastructure design and deployment; digital-twin development (X-Plane, NVIDIA Isaac Sim, Unity, Gazebo, MATLAB/Simulink); CI/CD validation pipelines; test automation; systematic failure mode analysis
-- **Autonomous System Architecture:** Full-stack understanding of perception, planning, control, and vehicle integration; system-level validation across subsystem interactions; design for testability
-- **Software & Middleware:** ROS/ROS2 (modular architecture, multi-subsystem integration), PX4, Ardupilot; Python/C/C++ on RTOS and Embedded Linux; real-time deterministic systems
-- **Autonomy & Control:** Guidance, navigation and control algorithms; EKF-based state estimation (AHRS, INS/GNSS); trajectory planning; FDIR; VTOL transition control; motor/gimbal control
-- **Sensing & Perception:** Depth cameras (Intel RealSense, OAK-D), thermal cameras, LiDAR, laser range finders, RTK-GNSS; OpenCV, YOLO, FFmpeg, GStreamer
-- **Communication & Telemetry:** Telemetry and command interfaces, data logging, ground control station integration; MAVLink, CAN, SPI, I2C, UART
+- **Simulation & Virtual Validation:** SIL/HIL testing infrastructure design and deployment; digital-twin development (X-Plane, NVIDIA Isaac Sim, Unity, Gazebo, MATLAB/Simulink); CI/CD validation pipelines; test automation; systematic failure mode analysis.
+- **Autonomous System Architecture:** Full-stack understanding of perception, planning, control, and vehicle integration; system-level validation across subsystem interactions; design for testability.
+- **Software & Middleware:** ROS/ROS2 (modular architecture, multi-subsystem integration), PX4, Ardupilot; Python/C/C++ on RTOS and Embedded Linux; real-time deterministic systems; STM32 hardware abstraction layers (HAL).
+- **Space grade & Safety-critical embedded:** Asymmetric multiprocessing (AMP) architecture; Eclipse ThreadX RTOS; Microchip PolarFire SoC; Yocto builds and BSP work; FPGA fabric design (Libero SoC) and JTAG bring-up; A/B/Rescue (Gold) over-the-air (OTA) update with rollback.
+- **AI-Assisted Engineering:** Agentic development systems for embedded work; automated plan-review-verify-ship loops with independent AI review; CI/CD driven against real target hardware.
+- **Autonomy & Control:** Guidance, navigation and control algorithms; EKF-based state estimation (AHRS, INS/GNSS); trajectory planning; FDIR; VTOL transition control; motor/gimbal control.
+- **Sensing & Perception:** Depth cameras (Intel RealSense, OAK-D), thermal cameras, LiDAR, laser range finders, RTK-GNSS; OpenCV, YOLO, FFmpeg, GStreamer.
+- **Communication & Telemetry:** Telemetry and command interfaces, data logging, ground control station integration; MAVLink, CCSDS/PUS spacecraft telemetry, CAN, SPI, I2C, UART.
 
 ---
 

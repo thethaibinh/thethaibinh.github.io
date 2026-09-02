@@ -15,7 +15,7 @@ const BODY = "Cambria";
 const HEAD = "Calibri";
 const MONO = "Consolas";
 
-const MARGIN = { top: 420, bottom: 340, left: 640, right: 640 };
+const MARGIN = { top: 420, bottom: 300, left: 640, right: 640 };
 const CONTENT = 11906 - MARGIN.left - MARGIN.right;
 
 // ---------- helpers ----------
@@ -30,7 +30,7 @@ const p = (parts, opts = {}) => new Paragraph({
 });
 
 const h2 = (num, text) => new Paragraph({
-  spacing: { before: 56, after: 24 },
+  spacing: { before: 50, after: 22 },
   keepNext: true,
   children: [
     new TextRun({ text: num + "  ", font: MONO, size: 13, bold: true, color: ACCENT }),
@@ -95,7 +95,7 @@ const triad = new Table({
     axisRow("Open architecture", "a graph you can modify", [
       ["Modeling code, kernels and compilation path. "],
       ["Determinism lives on this axis, not in the weights:", true],
-      [" batch-invariant inference means replacing the RMSNorm, matmul and attention kernels, which cannot be done inside a graph you cannot see. The same access decides which layer a probe reads, whether a TensorRT engine can be built, and whether the model can be audited for a backdoor at all. Weights without architecture are an inert blob."],
+      [" batch-invariant inference means replacing the RMSNorm, matmul and attention kernels, which cannot be done inside a graph you cannot see. It also decides which layer a probe reads, whether a TensorRT engine can be built, and whether a backdoor can be audited at all. Weights without architecture are an inert blob."],
     ]),
     axisRow("Open data", "a distribution you can interrogate", [
       ["NVIDIA now publishes the corpora too: Nemotron-CC-v2 at 9.13T web tokens, 1.09T curated code and 133.3B math tokens, plus the Physical AI robotics sets, past ten million downloads and CC BY 4.0 in part. This buys a falsification suite you can "],
@@ -135,7 +135,7 @@ const stack = new Table({
       "Site rules grounded into temporal logic and resolved against the plan by control synthesis; RoboGuard reports unsafe execution falling from 92% to under 2.5% under worst-case jailbreak. A simplex switch then hands authority to a verified controller as the last line, and our RA-L planner is that executor.",
       "Isaac Sim and Isaac Lab for adversarial scenario generation; Isaac ROS"),
     layerRow("L3 ESC.", "orchestration", "Calibrated deferral and routing",
-      "Conformal prediction over real token scores gives distribution-free coverage and a principled trigger to ask a human or escalate. This needs logits, which open weights give and most endpoints withhold. A small pinned model holds the edge loop; a large one is reachable for slow reasoning.",
+      "Conformal prediction over real token scores gives distribution-free coverage and a principled trigger to ask a human or escalate. This needs logits, which open weights give and most endpoints withhold, and it decides when a small pinned edge model hands off to a large one.",
       "NeMo Switchyard, Dynamo, A100 or DGX hours for calibration sweeps"),
   ],
 });
@@ -189,7 +189,19 @@ const doc = new Document({
 
       new Paragraph({
         alignment: AlignmentType.JUSTIFIED,
-        spacing: { before: 34, after: 34, line: 198 },
+        spacing: { after: 38, line: 182 },
+        children: [
+          new TextRun({ text: "THE NAME   ", font: MONO, size: 11, bold: true, color: ACCENT, characterSpacing: 10 }),
+          new TextRun({
+            text: "Interlock is the safety-engineering term for a mechanism that physically prevents an unsafe action from being carried out, like the switch that cuts the microwave the moment its door opens: this project builds that for a robot taking instructions from a language model.",
+            font: BODY, size: 14, color: GREY,
+          }),
+        ],
+      }),
+
+      new Paragraph({
+        alignment: AlignmentType.JUSTIFIED,
+        spacing: { before: 30, after: 30, line: 198 },
         indent: { left: 150, right: 40 },
         border: { left: { style: BorderStyle.SINGLE, size: 16, color: ACCENT, space: 9 } },
         children: [new TextRun({
@@ -199,13 +211,13 @@ const doc = new Document({
       }),
 
       h2("01", "The open push is a hardware demand strategy, and physical AI is where it stalls"),
-      p([["NVIDIA has spent 2026 making the case from every direction: Nemotron 3 with published weights and reproducible recipes, the Nemotron Coalition, a joint engine with Palantir for air-gapped sovereign deployment, Isaac GR00T N1.7 with an open reference humanoid, and the training corpora themselves. Every operator that vendors its own weights buys its own accelerators. It stalls in physical AI: a sovereign operator can host a model but cannot certify a robot around it. Assurance, not model quality, gates deployment in mining, agriculture, defence and orbital servicing, and nobody has built the stack that converts openness into that argument."]]),
+      p([["NVIDIA has spent 2026 making the case from every direction: Nemotron 3 with published weights and recipes, the Nemotron Coalition, a Palantir engine for air-gapped sovereign deployment, Isaac GR00T N1.7 with an open reference humanoid, and the corpora themselves. Every operator that vendors its own weights buys its own accelerators. It stalls in physical AI: a sovereign operator can host a model but cannot certify a robot around it. Assurance, not model quality, gates deployment in mining, agriculture, defence and orbital servicing, and nobody has built the stack that converts openness into that argument."]]),
 
       h2("02", "Three kinds of openness, and the different guarantee each one buys"),
       triad,
 
       h2("03", "Why it has to be open: guardrails decay with the model they wrap"),
-      p([["Longitudinal tracking of commercial APIs (HAPI) found substantial behaviour change over time in the majority observed, inside unchanged version strings. A 2026 benchmark finds that fine-tuning-style updates frequently invalidate frozen activation probes while quantisation-style updates largely do not, and on a closed endpoint you cannot tell which kind landed. Pin the three axes and every safety artifact gains a stable referent and an explicit revalidation trigger. Batch-invariant kernels then buy bitwise-reproducible inference for 34% to 60% of throughput. "], ["Determinism stops being a hope about the vendor and becomes a line item you buy with compute.", true]]),
+      p([["Longitudinal tracking of commercial APIs (HAPI) found substantial behaviour change in the majority observed, inside unchanged version strings. A 2026 benchmark finds that fine-tuning-style updates frequently invalidate frozen activation probes while quantisation-style updates largely do not, and on a closed endpoint you cannot tell which kind landed. Pin the three axes and every safety artifact gains a stable referent and an explicit revalidation trigger. Batch-invariant kernels then buy bitwise-reproducible inference for 34% to 60% of throughput. "], ["Determinism stops being a hope about the vendor and becomes a line item you buy with compute.", true]]),
 
       h2("04", "Architecture: four layers, command flowing down, veto flowing up"),
       stack,
@@ -226,10 +238,10 @@ const doc = new Document({
 
       new Paragraph({
         alignment: AlignmentType.JUSTIFIED,
-        spacing: { before: 30, after: 0, line: 155 },
+        spacing: { before: 20, after: 0, line: 152 },
         border: { top: { style: BorderStyle.SINGLE, size: 6, color: RULE, space: 4 } },
         children: [new TextRun({
-          text: "SOURCES   [1] Nguyen, IEEE RA-L 10(8), 2025.   [2] RoboGuard, arXiv:2503.07885.   [3] KnowNo, CoRL 2023.   [4] XGrammar; alignment tax, arXiv:2604.06066.   [5] Thinking Machines, Defeating Nondeterminism, 2025.   [6] Activation-monitor staleness, arXiv:2606.15980.   [7] HAPI API-drift dataset.   [8] Safety Chip, ICRA 2024; simplex after Sha, 2001.   Data: nvidia/Nemotron-Pretraining-*, nvidia/PhysicalAI-Robotics-*.",
+          text: "SOURCES   Nguyen, IEEE RA-L 10(8), 2025 \u00b7 RoboGuard, arXiv:2503.07885 \u00b7 KnowNo, CoRL 2023 \u00b7 XGrammar; alignment tax, arXiv:2604.06066 \u00b7 Thinking Machines, Defeating Nondeterminism, 2025 \u00b7 Activation-monitor staleness, arXiv:2606.15980 \u00b7 HAPI API-drift dataset \u00b7 Safety Chip, ICRA 2024; simplex after Sha, 2001 \u00b7 Data: nvidia/Nemotron-Pretraining-*, nvidia/PhysicalAI-Robotics-*.",
           font: MONO, size: 11, color: GREY,
         })],
       }),

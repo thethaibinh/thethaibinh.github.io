@@ -116,6 +116,25 @@
     padding-left: 1.1rem;
   }
 
+  .gloss {
+    margin: 0.85rem 0 0;
+    max-width: 68ch;
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    text-align: justify;
+    hyphens: auto;
+  }
+  .gloss span {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-right: 0.5rem;
+  }
+
   .byline {
     margin-top: 1.6rem;
     padding-top: 0.8rem;
@@ -467,6 +486,8 @@
     .subtitle { font-size: 9.6pt; margin-top: 0.3rem; max-width: 60ch; }
     .eyebrow { font-size: 7pt; padding-bottom: 0.4rem; }
     .deck { font-size: 8.8pt; margin-top: 0.6rem; padding-left: 0.7rem; max-width: none; }
+    .gloss { font-size: 8.2pt; margin-top: 0.45rem; max-width: none; line-height: 1.4; }
+    .gloss span { font-size: 6.4pt; }
     .byline { margin-top: 0.55rem; padding-top: 0.35rem; font-size: 7pt; }
 
     section.clause {
@@ -532,6 +553,8 @@
 
     <h1>Interlock</h1>
     <p class="subtitle">Version-pinned harnesses, guardrails and orchestration for open models in robot perception, trajectory planning and control.</p>
+
+    <p class="gloss"><span>The name</span>Interlock is the safety-engineering term for a mechanism that physically prevents an unsafe action from being carried out, like the switch that cuts the microwave the moment its door opens: this project builds that for a robot taking instructions from a language model.</p>
 
     <p class="deck">An open model is three separable things: open weights, open architecture and open data. Together they are the only substrate on which a robot safety case can be written down and stay true, because every guardrail is a contract with one specific model, and a model you do not control can void that contract overnight without telling you. The proposal is to build the stack that turns all three kinds of openness into a certifiable autonomy component, and to measure what that assurance actually costs in throughput, latency and watts.</p>
 

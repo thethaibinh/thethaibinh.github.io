@@ -1,4 +1,4 @@
-<title>Project Interlock</title>
+<title>Project Tether</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -551,10 +551,10 @@
       <span class="live">For comment, not for submission</span>
     </div>
 
-    <h1>Interlock</h1>
-    <p class="subtitle">Version-pinned harnesses, guardrails and orchestration for open models in robot perception, trajectory planning and control.</p>
+    <h1>Tether</h1>
+    <p class="subtitle">Bounding how far an open model can move a robot: harnesses, guardrails and orchestration for perception, trajectory planning and control.</p>
 
-    <p class="gloss"><span>The name</span>Interlock is the safety-engineering term for a mechanism that physically prevents an unsafe action from being carried out, like the switch that cuts the microwave the moment its door opens: this project builds that for a robot taking instructions from a language model.</p>
+    <p class="gloss"><span>The name</span>A tether does not decide where the robot goes, only how far it can get. This project makes that maximum distance explicit, measurable and stable, which is a weaker claim than determinism and, unlike determinism, an achievable one: the model stays unpredictable, the excursion does not.</p>
 
     <p class="deck">An open model is three separable things: open weights, open architecture and open data. Together they are the only substrate on which a robot safety case can be written down and stay true, because every guardrail is a contract with one specific model, and a model you do not control can void that contract overnight without telling you. The proposal is to build the stack that turns all three kinds of openness into a certifiable autonomy component, and to measure what that assurance actually costs in throughput, latency and watts.</p>
 
@@ -633,7 +633,8 @@
   <section class="clause">
     <div class="marker">04<span>Architecture</span></div>
     <div>
-      <h2>Four layers, each one a published technique we would harden and connect</h2>
+      <h2>Four layers, each a tether in a different space</h2>
+      <p>The name is the design. Every layer bounds a different quantity, and the four bounds compose: the grammar limits what the model can <b>say</b>, the specification limits what can be <b>planned</b>, the reachability filter limits where the robot can <b>get</b>, and the conformal quantile limits how often any of it is <b>wrong</b>. None of them makes the model predictable. Together they make the excursion finite, and the pinned substrate is what stops the four lengths drifting when nobody is looking.</p>
 
       <div class="stack">
         <div class="flow" aria-hidden="true">
@@ -652,7 +653,7 @@
           </div>
 
           <div class="layer">
-            <div class="tag">L1 &middot; TYPE<span>harness</span></div>
+            <div class="tag">L1 &middot; TYPE<span>token space</span></div>
             <div>
               <h3>Constrained decoding, so free text never reaches the control path</h3>
               <p>Grammar and automaton constrained decoding masks the next-token distribution at every step, so the model can only emit well-typed artifacts: waypoints in the robot frame, semantic goal handles, or temporal-logic clauses. Type correctness holds by construction, with no parse errors, no retries and no fallback parser. The known cost is an alignment tax on reasoning quality, which we would measure rather than assume away.<sup class="ref">4</sup></p>
@@ -661,7 +662,7 @@
           </div>
 
           <div class="layer">
-            <div class="tag">L2 &middot; VETO<span>guardrail</span></div>
+            <div class="tag">L2 &middot; VETO<span>state space</span></div>
             <div>
               <h3>Symbolic specification and a verified fallback</h3>
               <p>Site rules are grounded into temporal-logic specifications and resolved against the proposed plan by control synthesis; RoboGuard reports unsafe plan execution dropping from 92% to under 2.5% under worst-case jailbreaking, with no loss on safe plans.<sup class="ref">2</sup> Beneath that sits a simplex runtime-assurance switch handing authority to a verified controller, and a reachability or barrier-function filter as the last line. Our non-conservative, depth-noise-aware planner<sup class="ref">1</sup> is that verified executor, so continuity with the prior award is structural rather than rhetorical.</p>
@@ -670,7 +671,7 @@
           </div>
 
           <div class="layer">
-            <div class="tag">L3 &middot; ESCALATE<span>orchestration</span></div>
+            <div class="tag">L3 &middot; ESCALATE<span>error rate</span></div>
             <div>
               <h3>Calibrated deferral and edge-to-cloud routing</h3>
               <p>Conformal prediction over the model's real token scores yields distribution-free coverage guarantees and a principled trigger to ask a human or escalate to a larger model, in the KnowNo tradition.<sup class="ref">3</sup> This needs logits, which open weights give and most commercial endpoints withhold. A small pinned model holds the time-critical edge loop while a large one is reachable for slow reasoning; the reported 10 to 30 times cost advantage of a 7B model over a 70B to 175B one<sup class="ref">8</sup> is what makes the split worth engineering.</p>

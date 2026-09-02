@@ -128,13 +128,13 @@ const stack = new Table({
     layerRow("L0 PIN", "substrate", "Reproducible inference",
       "Checkpoint hash, kernel and quantisation recipe, calibration split and recorded sensor tape versioned as one unit, with a conformance test that fails loudly on any substrate change.",
       "Nemotron 3, Cosmos Reason, GR00T N1.7, NIM, TensorRT-LLM, Dynamo, Jetson Thor"),
-    layerRow("L1 TYPE", "harness", "Constrained decoding",
+    layerRow("L1 TYPE", "token space", "Constrained decoding",
       "Grammar-constrained decoding masks the next-token distribution so the model can only emit well-typed waypoints, goal handles or temporal-logic clauses. No free text ever reaches the control path. The alignment tax is measured, not assumed away.",
       "XGrammar in TensorRT-LLM; NeMo Guardrails, Colang extended to action rails"),
-    layerRow("L2 VETO", "guardrail", "Symbolic spec and verified fallback",
+    layerRow("L2 VETO", "state space", "Symbolic spec and verified fallback",
       "Site rules grounded into temporal logic and resolved against the plan by control synthesis; RoboGuard reports unsafe execution falling from 92% to under 2.5% under worst-case jailbreak. A simplex switch then hands authority to a verified controller as the last line, and our RA-L planner is that executor.",
       "Isaac Sim and Isaac Lab for adversarial scenario generation; Isaac ROS"),
-    layerRow("L3 ESC.", "orchestration", "Calibrated deferral and routing",
+    layerRow("L3 ESC.", "error rate", "Calibrated deferral and routing",
       "Conformal prediction over real token scores gives distribution-free coverage and a principled trigger to ask a human or escalate. This needs logits, which open weights give and most endpoints withhold, and it decides when a small pinned edge model hands off to a large one.",
       "NeMo Switchyard, Dynamo, A100 or DGX hours for calibration sweeps"),
   ],
@@ -144,8 +144,8 @@ const stack = new Table({
 
 const doc = new Document({
   creator: "Binh Nguyen",
-  title: "Interlock concept brief",
-  description: "Version-pinned harnesses and guardrails for open models in robotics",
+  title: "Tether concept brief",
+  description: "Bounding how far an open model can move a robot",
   numbering: {
     config: [{
       reference: "dot",
@@ -170,12 +170,12 @@ const doc = new Document({
 
       new Paragraph({
         spacing: { before: 70, after: 16 },
-        children: [new TextRun({ text: "Interlock", font: HEAD, size: 32, bold: true, color: INK })],
+        children: [new TextRun({ text: "Tether", font: HEAD, size: 32, bold: true, color: INK })],
       }),
       new Paragraph({
         spacing: { after: 45 },
         children: [new TextRun({
-          text: "Version-pinned harnesses, guardrails and orchestration for open models in robot perception, trajectory planning and control.",
+          text: "Bounding how far an open model can move a robot: harnesses, guardrails and orchestration for perception, trajectory planning and control.",
           font: HEAD, size: 17, color: GREY,
         })],
       }),
@@ -193,7 +193,7 @@ const doc = new Document({
         children: [
           new TextRun({ text: "THE NAME   ", font: MONO, size: 11, bold: true, color: ACCENT, characterSpacing: 10 }),
           new TextRun({
-            text: "Interlock is the safety-engineering term for a mechanism that physically prevents an unsafe action from being carried out, like the switch that cuts the microwave the moment its door opens: this project builds that for a robot taking instructions from a language model.",
+            text: "A tether does not decide where the robot goes, only how far it can get. This project makes that maximum distance explicit, measurable and stable, which is a weaker claim than determinism and, unlike determinism, an achievable one: the model stays unpredictable, the excursion does not.",
             font: BODY, size: 14, color: GREY,
           }),
         ],
@@ -219,7 +219,7 @@ const doc = new Document({
       h2("03", "Why it has to be open: guardrails decay with the model they wrap"),
       p([["Longitudinal tracking of commercial APIs (HAPI) found substantial behaviour change in the majority observed, inside unchanged version strings. A 2026 benchmark finds that fine-tuning-style updates frequently invalidate frozen activation probes while quantisation-style updates largely do not, and on a closed endpoint you cannot tell which kind landed. Pin the three axes and every safety artifact gains a stable referent and an explicit revalidation trigger. Batch-invariant kernels then buy bitwise-reproducible inference for 34% to 60% of throughput. "], ["Determinism stops being a hope about the vendor and becomes a line item you buy with compute.", true]]),
 
-      h2("04", "Architecture: four layers, command flowing down, veto flowing up"),
+      h2("04", "Architecture: four layers, each a tether in a different space"),
       stack,
 
       h2("05", "Four questions the literature has not answered"),
@@ -250,6 +250,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync('Interlock-Brief.docx', buf);
-  console.log('wrote Interlock-Brief.docx', buf.length, 'bytes');
+  fs.writeFileSync('Tether-Brief.docx', buf);
+  console.log('wrote Tether-Brief.docx', buf.length, 'bytes');
 });

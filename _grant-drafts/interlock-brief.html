@@ -429,11 +429,60 @@
   }
 
   @media print {
-    body { background: #fff; color: #000; font-size: 9.4pt; line-height: 1.42; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    body { background: #fff; font-size: 8.6pt; line-height: 1.34; }
     .sheet { padding: 0; max-width: none; }
-    section.clause { margin-top: 0.85rem; padding-top: 0.6rem; break-inside: avoid; }
-    h1 { font-size: 30pt; }
-    .evidence, .layers, .ask { break-inside: avoid; }
+
+    h1 { font-size: 23pt; margin-top: 0.5rem; }
+    .subtitle { font-size: 9.6pt; margin-top: 0.3rem; max-width: 60ch; }
+    .eyebrow { font-size: 7pt; padding-bottom: 0.4rem; }
+    .deck { font-size: 8.8pt; margin-top: 0.6rem; padding-left: 0.7rem; max-width: none; }
+    .byline { margin-top: 0.55rem; padding-top: 0.35rem; font-size: 7pt; }
+
+    section.clause {
+      margin-top: 0.55rem;
+      padding-top: 0.42rem;
+      grid-template-columns: 4.6rem minmax(0, 1fr);
+      gap: 0 0.9rem;
+    }
+    .marker { font-size: 7pt; padding-top: 0.15rem; }
+    h2 { font-size: 10.6pt; margin-bottom: 0.32rem; }
+    .clause p { margin-bottom: 0.4rem; max-width: none; }
+    .clause p, .q p { font-size: 8.6pt; }
+
+    .evidence { margin: 0.5rem 0 0.45rem; grid-template-columns: repeat(3, 1fr); }
+    .ev { padding: 0.45rem 0.55rem 0.5rem; gap: 0.15rem; }
+    .ev .fig { font-size: 11.5pt; }
+    .ev .cap { font-size: 7.6pt; line-height: 1.32; }
+    .ev .src { font-size: 6.4pt; padding-top: 0.2rem; }
+
+    .stack { grid-template-columns: 1rem minmax(0, 1fr); gap: 0 0.5rem; }
+    .layer { padding: 0.5rem 0.6rem; grid-template-columns: 5.6rem minmax(0, 1fr) 9.5rem; gap: 0 0.75rem; }
+    .layer h3 { font-size: 8.9pt; margin-bottom: 0.16rem; }
+    .layer p { font-size: 8pt; line-height: 1.34; }
+    .tag { font-size: 7.6pt; }
+    .tag span { font-size: 6.4pt; }
+    .kit { font-size: 6.6pt; line-height: 1.5; padding-left: 0.45rem; }
+    .kit b { font-size: 6.2pt; }
+
+    .qlist { gap: 0.35rem; }
+    .q { grid-template-columns: 1.7rem minmax(0, 1fr); }
+    .q .qn { font-size: 8pt; }
+
+    .ask { padding: 0.55rem 0.65rem; margin-bottom: 0.45rem; gap: 0.5rem 1rem; }
+    .ask div p { font-size: 7.8pt; line-height: 1.34; }
+    .ask div b { font-size: 6.4pt; }
+
+    .discuss { gap: 0.3rem; }
+    .discuss li { font-size: 8.4pt; line-height: 1.36; max-width: none; }
+
+    .refs { margin-top: 0.8rem; padding-top: 0.5rem; font-size: 6.8pt; line-height: 1.5; }
+    .refs p { margin-bottom: 0.2rem; }
+
+    .evidence, .ask, .refs, .layer, .q, .discuss li, .ev { break-inside: avoid; }
+    h2 { break-after: avoid; }
+    header { break-after: avoid; }
   }
 </style>
 

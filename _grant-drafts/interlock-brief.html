@@ -1,0 +1,607 @@
+<title>Project Interlock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  :root {
+    --paper:      #F6F7F3;
+    --surface:    #FFFFFF;
+    --ink:        #161A16;
+    --ink-2:      #4A544A;
+    --ink-3:      #7C857A;
+    --rule:       #DCE0D6;
+    --rule-soft:  #E9ECE4;
+    --accent:     #4C7A1E;
+    --accent-bg:  #EBF1E0;
+    --warn:       #8F5D0E;
+    --warn-bg:    #F7EFDD;
+
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #101310;
+      --surface:   #171B16;
+      --ink:       #E7EAE2;
+      --ink-2:     #A6AFA1;
+      --ink-3:     #7F8A7C;
+      --rule:      #2C332B;
+      --rule-soft: #222821;
+      --accent:    #9ED357;
+      --accent-bg: #1D2716;
+      --warn:      #D9A441;
+      --warn-bg:   #2A2113;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #101310;
+    --surface:   #171B16;
+    --ink:       #E7EAE2;
+    --ink-2:     #A6AFA1;
+    --ink-3:     #7F8A7C;
+    --rule:      #2C332B;
+    --rule-soft: #222821;
+    --accent:    #9ED357;
+    --accent-bg: #1D2716;
+    --warn:      #D9A441;
+    --warn-bg:   #2A2113;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 3.2rem 1.6rem 4rem;
+  }
+
+  /* ---- masthead ---- */
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 2px solid var(--ink);
+  }
+  .eyebrow .live { color: var(--accent); }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 7vw, 4.1rem);
+    line-height: 0.94;
+    letter-spacing: -0.025em;
+    margin: 1.5rem 0 0;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1rem, 2.2vw, 1.22rem);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--ink-2);
+    margin: 0.7rem 0 0;
+    max-width: 46ch;
+    text-wrap: balance;
+  }
+
+  .deck {
+    margin: 1.5rem 0 0;
+    max-width: 68ch;
+    font-size: 1.06rem;
+    text-align: justify;
+    hyphens: auto;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.1rem;
+  }
+
+  .byline {
+    margin-top: 1.6rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: var(--ink-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.4rem;
+  }
+  .byline b { color: var(--ink-2); font-weight: 500; }
+
+  /* ---- clause rail layout ---- */
+
+  section.clause {
+    display: grid;
+    grid-template-columns: 6.2rem minmax(0, 1fr);
+    gap: 0 1.6rem;
+    margin-top: 2.6rem;
+    padding-top: 1.3rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .marker {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 0.42rem;
+    line-height: 1.5;
+  }
+  .marker span {
+    display: block;
+    color: var(--ink-3);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0 0 0.7rem;
+    text-wrap: balance;
+  }
+
+  .clause p {
+    margin: 0 0 0.85rem;
+    max-width: 68ch;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .clause p:last-child { margin-bottom: 0; }
+
+  b, strong { font-weight: 600; }
+  .term { font-family: var(--mono); font-size: 0.87em; color: var(--ink-2); }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  sup.ref {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--accent);
+    vertical-align: super;
+    line-height: 0;
+    padding-left: 0.1em;
+  }
+
+  /* ---- evidence strip ---- */
+
+  .evidence {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin: 1.2rem 0 1.1rem;
+  }
+  .ev {
+    background: var(--surface);
+    padding: 0.85rem 0.95rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .ev .fig {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 1.32rem;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--warn);
+    line-height: 1;
+  }
+  .ev.good .fig { color: var(--accent); }
+  .ev .cap {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--ink-2);
+  }
+  .ev .src {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: auto;
+    padding-top: 0.35rem;
+  }
+
+  /* ---- the stack ---- */
+
+  .stack {
+    margin-top: 0.4rem;
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    gap: 0 0.9rem;
+  }
+
+  .flow {
+    position: relative;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .flow::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 4.4rem;
+    bottom: 4.4rem;
+    width: 1px;
+    background: var(--rule);
+  }
+  .flow .lab {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0 0;
+    white-space: nowrap;
+  }
+  .flow .down { top: 0.4rem; transform: rotate(90deg) translateX(0); color: var(--accent); }
+  .flow .up { bottom: 0.4rem; transform: rotate(-90deg) translateX(0); color: var(--warn); }
+
+  .layers { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+
+  .layer {
+    background: var(--surface);
+    display: grid;
+    grid-template-columns: 7.4rem minmax(0, 1fr) 12.5rem;
+    gap: 0 1.1rem;
+    padding: 0.95rem 1rem;
+    align-items: start;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    padding-top: 0.15rem;
+  }
+  .tag span {
+    display: block;
+    font-weight: 400;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    margin-top: 0.2rem;
+  }
+
+  .layer h3 {
+    font-family: var(--display);
+    font-size: 0.98rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.3rem;
+  }
+  .layer p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .kit {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    line-height: 1.65;
+    letter-spacing: 0.02em;
+    color: var(--ink-2);
+    border-left: 2px solid var(--accent-bg);
+    padding-left: 0.7rem;
+  }
+  .kit b {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  /* ---- questions ---- */
+
+  .qlist { display: grid; gap: 0.75rem; margin: 0.2rem 0 0; }
+  .q { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0 0.6rem; }
+  .q .qn {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    padding-top: 0.16rem;
+  }
+  .q p { margin: 0; max-width: 66ch; text-align: justify; hyphens: auto; font-size: 0.94rem; }
+
+  /* ---- ask ---- */
+
+  .ask {
+    background: var(--accent-bg);
+    border: 1px solid var(--rule);
+    padding: 1rem 1.1rem;
+    margin: 0 0 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 0.9rem 1.4rem;
+  }
+  .ask div b {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .ask div p { margin: 0; font-size: 0.88rem; line-height: 1.45; text-align: left; }
+
+  /* ---- open questions to the team ---- */
+
+  .discuss { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+  .discuss li {
+    display: grid;
+    grid-template-columns: 0.9rem minmax(0, 1fr);
+    gap: 0 0.7rem;
+    max-width: 68ch;
+    font-size: 0.94rem;
+    line-height: 1.5;
+  }
+  .discuss li::before {
+    content: "?";
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--warn);
+  }
+
+  /* ---- refs ---- */
+
+  .refs {
+    margin-top: 2.4rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: var(--ink-2);
+    columns: 2;
+    column-gap: 2.4rem;
+  }
+  .refs h2 {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 0.5rem;
+    column-span: all;
+  }
+  .refs p { margin: 0 0 0.4rem; break-inside: avoid; }
+  .refs em { color: var(--ink-3); font-style: normal; }
+
+  /* ---- responsive ---- */
+
+  @media (max-width: 860px) {
+    .layer { grid-template-columns: 6rem minmax(0, 1fr); }
+    .kit { grid-column: 1 / -1; margin-top: 0.6rem; border-left: none; border-top: 1px solid var(--rule-soft); padding: 0.5rem 0 0; }
+  }
+  @media (max-width: 620px) {
+    .sheet { padding: 2.2rem 1.1rem 3rem; }
+    section.clause { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .marker { padding-top: 0; margin-bottom: 0.5rem; }
+    .marker span { display: inline; margin-left: 0.5rem; }
+    .stack { grid-template-columns: minmax(0, 1fr); }
+    .flow { display: none; }
+    .layer { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+    .refs { columns: 1; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; font-size: 9.4pt; line-height: 1.42; }
+    .sheet { padding: 0; max-width: none; }
+    section.clause { margin-top: 0.85rem; padding-top: 0.6rem; break-inside: avoid; }
+    h1 { font-size: 30pt; }
+    .evidence, .layers, .ask { break-inside: avoid; }
+  }
+</style>
+
+<div class="sheet">
+
+  <header>
+    <div class="eyebrow">
+      <span>NVIDIA Academic Grant Program</span>
+      <span>Robotics and Edge AI</span>
+      <span>Concept brief v0.1</span>
+      <span class="live">For comment, not for submission</span>
+    </div>
+
+    <h1>Interlock</h1>
+    <p class="subtitle">Version-pinned harnesses, guardrails and orchestration for open-weight models in robot perception, trajectory planning and control.</p>
+
+    <p class="deck">Open weights are the only substrate on which a robot safety case can be written down and stay true. Every guardrail is a contract with one specific model, and a model you do not control can void that contract overnight without telling you. The proposal is to build the stack that turns a pinned checkpoint into a certifiable autonomy component, and to measure what that assurance actually costs in throughput, latency and watts.</p>
+
+    <div class="byline">
+      <span><b>Circulated by</b> Binh Nguyen</span>
+      <span><b>Date</b> 2 September 2026</span>
+      <span><b>Lineage</b> EywaGuard, NVIDIA Academic Grant (awarded)</span>
+      <span><b>Status</b> rough idea, tear it apart</span>
+    </div>
+  </header>
+
+  <section class="clause">
+    <div class="marker">01<span>Why NVIDIA</span></div>
+    <div>
+      <h2>The open-weight push is a hardware demand strategy, and physical AI is where it stalls</h2>
+      <p>NVIDIA has spent 2026 making the case for open weights from every direction at once: the Nemotron 3 family with published weights and reproducible training recipes, the Nemotron Coalition of external labs, a joint engine with Palantir for training and serving Nemotron entirely inside classified and air-gapped environments, and Isaac GR00T N1.7 with an open reference humanoid for academic research. The logic is direct. Every government, defence prime and industrial operator that vendors its own weights to achieve sovereignty buys its own accelerators to serve them.</p>
+      <p>That logic runs into a wall in physical AI. A sovereign operator can host a model easily enough, but it cannot certify a robot around it. What gates deployment in mining, agriculture, defence and orbital servicing is not model quality, which is already adequate; it is the absence of an assurance argument that a safety regulator, an insurer or a mission authority will accept. Nobody has built the stack that converts open weights into that argument. Doing so is a research contribution, and it happens to unlock exactly the market segment the open-model strategy is aimed at.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">02<span>The wedge</span></div>
+    <div>
+      <h2>Closed models rot your guardrails; pinned weights make them durable</h2>
+
+      <div class="evidence">
+        <div class="ev">
+          <div class="fig">&gt;60%</div>
+          <div class="cap">of commercial ML APIs tracked longitudinally showed substantial behaviour change over time, including within an unchanged version string.</div>
+          <div class="src">HAPI, and follow-on drift studies<sup class="ref">7</sup></div>
+        </div>
+        <div class="ev">
+          <div class="fig">stale</div>
+          <div class="cap">Frozen activation probes survive quantisation-style updates but are frequently invalidated by fine-tuning-style ones, with fragility strongly monitor-dependent.</div>
+          <div class="src">Monitor staleness benchmark, 2026<sup class="ref">6</sup></div>
+        </div>
+        <div class="ev good">
+          <div class="fig">34 to 60%</div>
+          <div class="cap">throughput cost of batch-invariant kernels, which buy bitwise-identical output across repeated runs. The price of determinism, and it is payable.</div>
+          <div class="src">Thinking Machines Lab, 2025<sup class="ref">5</sup></div>
+        </div>
+      </div>
+
+      <p>The three figures above are the whole argument. Runtime monitors that read a model's internal activations are the cheapest and lowest-latency guardrails available, and they are precisely the ones that die when the model underneath them shifts. On a closed endpoint you cannot pin the weights, cannot tell whether an update was a requantisation or a fine-tune, and therefore cannot know whether your monitor is still measuring what it was calibrated on. Every safety artifact you build has an unstated expiry date.</p>
+      <p>Open weights invert this completely. Pin a checkpoint hash, a quantisation recipe and a kernel set, and every derived artifact, whether a linear probe, a conformal quantile, a decoding grammar or a falsification suite, acquires a stable referent and an explicit revalidation trigger: the pin changed, so revalidate. Add batch-invariant kernels and the inference itself becomes bitwise reproducible, which is the property a regression suite has always silently assumed and never had. Same sensor tape in, same trajectory out, every time, and a diff the moment that stops holding. <b>Determinism stops being a hope about the vendor and becomes a line item you buy with compute.</b></p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">03<span>Architecture</span></div>
+    <div>
+      <h2>Four layers, each one a published technique we would harden and connect</h2>
+
+      <div class="stack">
+        <div class="flow" aria-hidden="true">
+          <span class="lab down">command &darr;</span>
+          <span class="lab up">veto &uarr;</span>
+        </div>
+
+        <div class="layers">
+          <div class="layer">
+            <div class="tag">L0 &middot; PIN<span>substrate</span></div>
+            <div>
+              <h3>Reproducible inference</h3>
+              <p>Checkpoint hash, quantisation recipe, batch-invariant kernels, fixed seeds and recorded sensor tape, treated as one versioned unit. The deliverable is a conformance test that replays a tape and fails loudly on any substrate change, so a silent regression becomes a build failure rather than a field incident.</p>
+            </div>
+            <div class="kit"><b>NVIDIA</b>Nemotron 3 Nano / Super &middot; Cosmos Reason &middot; Isaac GR00T N1.7 &middot; NIM &middot; TensorRT-LLM &middot; Dynamo &middot; Jetson Thor</div>
+          </div>
+
+          <div class="layer">
+            <div class="tag">L1 &middot; TYPE<span>harness</span></div>
+            <div>
+              <h3>Constrained decoding, so free text never reaches the control path</h3>
+              <p>Grammar and automaton constrained decoding masks the next-token distribution at every step, so the model can only emit well-typed artifacts: waypoints in the robot frame, semantic goal handles, or temporal-logic clauses. Type correctness holds by construction, with no parse errors, no retries and no fallback parser. The known cost is an alignment tax on reasoning quality, which we would measure rather than assume away.<sup class="ref">4</sup></p>
+            </div>
+            <div class="kit"><b>NVIDIA</b>XGrammar in TensorRT-LLM &middot; NeMo Guardrails, with Colang extended from dialog rails to action rails</div>
+          </div>
+
+          <div class="layer">
+            <div class="tag">L2 &middot; VETO<span>guardrail</span></div>
+            <div>
+              <h3>Symbolic specification and a verified fallback</h3>
+              <p>Site rules are grounded into temporal-logic specifications and resolved against the proposed plan by control synthesis; RoboGuard reports unsafe plan execution dropping from 92% to under 2.5% under worst-case jailbreaking, with no loss on safe plans.<sup class="ref">2</sup> Beneath that sits a simplex runtime-assurance switch handing authority to a verified controller, and a reachability or barrier-function filter as the last line. Our non-conservative, depth-noise-aware planner<sup class="ref">1</sup> is that verified executor, so continuity with the prior award is structural rather than rhetorical.</p>
+            </div>
+            <div class="kit"><b>NVIDIA</b>Isaac Sim and Isaac Lab for adversarial scenario generation and falsification &middot; Isaac ROS</div>
+          </div>
+
+          <div class="layer">
+            <div class="tag">L3 &middot; ESCALATE<span>orchestration</span></div>
+            <div>
+              <h3>Calibrated deferral and edge-to-cloud routing</h3>
+              <p>Conformal prediction over the model's real token scores yields distribution-free coverage guarantees and a principled trigger to ask a human or escalate to a larger model, in the KnowNo tradition.<sup class="ref">3</sup> This needs logits, which open weights give and most commercial endpoints withhold. A small pinned model holds the time-critical edge loop while a large one is reachable for slow reasoning; the reported 10 to 30 times cost advantage of a 7B model over a 70B to 175B one<sup class="ref">8</sup> is what makes the split worth engineering.</p>
+            </div>
+            <div class="kit"><b>NVIDIA</b>NeMo Switchyard routing &middot; Dynamo &middot; A100 or DGX hours for calibration sweeps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">04<span>Contribution</span></div>
+    <div>
+      <h2>Four questions the literature has not answered</h2>
+      <div class="qlist">
+        <div class="q"><div class="qn">Q1</div><p><b>What is the validity domain of a guardrail?</b> Given a certificate calibrated on one <span class="term">(weights, quantisation, kernels)</span> triple, how does it degrade under post-training quantisation, LoRA adaptation and full fine-tuning? Staleness has now been benchmarked for text monitors. Nothing equivalent exists for embodied action, where the failure lands in the physical world.</p></div>
+        <div class="q"><div class="qn">Q2</div><p><b>Does the coverage guarantee survive contact with a field?</b> Conformal prediction assumes exchangeability, and deployment breaks it on day one through weather, lighting, wear and novel clutter. What does a defensible coverage claim look like under domain shift on a real robot, and how should the quantile be re-estimated online without discarding the guarantee?</p></div>
+        <div class="q"><div class="qn">Q3</div><p><b>Where is the safety-latency frontier?</b> Closed-loop monitoring consumes exactly the milliseconds in which the collision it is preventing would occur, so a slow guardrail can cause the harm it was installed to stop. This trade-off is acknowledged in the VLA safety literature<sup class="ref">9</sup> and rarely quantified. We would map it on Thor-class edge silicon.</p></div>
+        <div class="q"><div class="qn">Q4</div><p><b>What does assurance cost?</b> Total overhead in throughput, watts and dollars of running deterministic inference plus four guardrail layers at the edge. Publishing that number honestly is the rigorous version of the claim that trustworthy physical AI needs more compute, not less.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">05<span>The ask</span></div>
+    <div>
+      <h2>Resources and outputs</h2>
+      <div class="ask">
+        <div><b>Edge</b><p>2 &times; Jetson Thor, one deployed and one as a development twin, for L0 to L3 running in the real control loop.</p></div>
+        <div><b>Workstation</b><p>DGX Spark or RTX PRO 6000 Blackwell for pinned local inference with batch-invariant kernels.</p></div>
+        <div><b>Cloud</b><p>A100 hours, dominated by Q1: the full guardrail set must be retrained and revalidated across every model variant, not run once per model.</p></div>
+        <div><b>Models</b><p>Nemotron 3, Cosmos Reason and Isaac GR00T N1.7, used as pinned open checkpoints rather than endpoints.</p></div>
+      </div>
+      <p>Outputs we would commit to: an open-source reference stack; a public benchmark for guardrail durability under model updates in embodied settings, which does not currently exist in any form; two conference submissions; and a written reference safety case in a form an operator could actually put in front of a regulator. The last of these is the artifact NVIDIA's sovereign-AI customers are missing, and it is cheap for us to produce alongside the code.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">06<span>For the group</span></div>
+    <div>
+      <h2>What I want argued about before this is written up</h2>
+      <ul class="discuss">
+        <li>Embodiment: reuse the EywaGuard ground platform, go quadrotor where our planning and collision-checking work is strongest, or pivot to a manipulator to ride the GR00T narrative directly?</li>
+        <li>Depth versus breadth: build all four layers thinly as an integrated system, or go deep on L2 and L3 where the publishable claims and the unanswered questions actually sit?</li>
+        <li>Is the drift-and-staleness argument strong enough to carry the opening paragraph, or does a reviewer want a conventional capability claim first and the assurance argument second?</li>
+        <li>Who is PI, and from which institution, given the program requires a full-time faculty member? Continuity with the awarded EywaGuard proposal is worth something here.</li>
+        <li>Should the safety case target a named standard or authority from the start, or stay deliberately generic in the first year?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="refs">
+    <h2>Sources</h2>
+    <p>[1] B. Nguyen et al., Non-Conservative Efficient Collision Checking and Depth Noise-Awareness for Trajectory Planning, <em>IEEE RA-L</em> 10(8), 2025.</p>
+    <p>[2] Safety Guardrails for LLM-Enabled Robots (RoboGuard), arXiv:2503.07885, <em>IEEE RA-L</em>.</p>
+    <p>[3] A. Ren et al., Robots That Ask For Help: Uncertainty Alignment for LLM Planners (KnowNo), <em>CoRL</em> 2023, arXiv:2307.01928.</p>
+    <p>[4] XGrammar and Outlines constrained decoding; alignment-tax analyses, arXiv:2604.06066, 2026.</p>
+    <p>[5] Thinking Machines Lab, Defeating Nondeterminism in LLM Inference, Sept. 2025.</p>
+    <p>[6] Do Activation Monitors Survive Model Updates? arXiv:2606.15980, 2026.</p>
+    <p>[7] HAPI longitudinal commercial-API dataset; drift analyses in arXiv:2407.12220.</p>
+    <p>[8] P. Belcak et al., Small Language Models are the Future of Agentic AI, arXiv:2506.02153.</p>
+    <p>[9] Vision-Language-Action Safety: Threats, Challenges, Evaluations and Mechanisms, arXiv:2604.23775, 2026.</p>
+    <p>[10] W. Yang et al., Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents, <em>ICRA</em> 2024. Simplex runtime assurance after L. Sha, 2001.</p>
+  </section>
+
+</div>

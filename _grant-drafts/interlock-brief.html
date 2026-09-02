@@ -233,6 +233,34 @@
     padding-top: 0.35rem;
   }
 
+  /* ---- openness triad ---- */
+
+  .triad {
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 0.95rem;
+  }
+  .ax, .axbody { background: var(--surface); padding: 0.8rem 0.95rem; }
+  .axname {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .axsub {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.03em;
+    color: var(--ink-3);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+  .axbody p { margin: 0; font-size: 0.9rem; line-height: 1.5; text-align: justify; hyphens: auto; }
+
   /* ---- the stack ---- */
 
   .stack {
@@ -419,6 +447,7 @@
   }
   @media (max-width: 620px) {
     .sheet { padding: 2.2rem 1.1rem 3rem; }
+    .triad { grid-template-columns: minmax(0, 1fr); }
     section.clause { grid-template-columns: minmax(0, 1fr); gap: 0; }
     .marker { padding-top: 0; margin-bottom: 0.5rem; }
     .marker span { display: inline; margin-left: 0.5rem; }
@@ -458,6 +487,11 @@
     .ev .src { font-size: 6.4pt; padding-top: 0.2rem; }
 
     .stack { grid-template-columns: 1rem minmax(0, 1fr); gap: 0 0.5rem; }
+    .triad { grid-template-columns: 8.2rem minmax(0, 1fr); margin-top: 0.5rem; break-inside: avoid; }
+    .ax, .axbody { padding: 0.45rem 0.55rem; }
+    .axname { font-size: 8.9pt; }
+    .axsub { font-size: 6.4pt; margin-top: 0.15rem; }
+    .axbody p { font-size: 8pt; line-height: 1.34; }
     .layer { padding: 0.5rem 0.6rem; grid-template-columns: 5.6rem minmax(0, 1fr) 9.5rem; gap: 0 0.75rem; }
     .layer h3 { font-size: 8.9pt; margin-bottom: 0.16rem; }
     .layer p { font-size: 8pt; line-height: 1.34; }
@@ -497,9 +531,9 @@
     </div>
 
     <h1>Interlock</h1>
-    <p class="subtitle">Version-pinned harnesses, guardrails and orchestration for open-weight models in robot perception, trajectory planning and control.</p>
+    <p class="subtitle">Version-pinned harnesses, guardrails and orchestration for open models in robot perception, trajectory planning and control.</p>
 
-    <p class="deck">Open weights are the only substrate on which a robot safety case can be written down and stay true. Every guardrail is a contract with one specific model, and a model you do not control can void that contract overnight without telling you. The proposal is to build the stack that turns a pinned checkpoint into a certifiable autonomy component, and to measure what that assurance actually costs in throughput, latency and watts.</p>
+    <p class="deck">An open model is three separable things: open weights, open architecture and open data. Together they are the only substrate on which a robot safety case can be written down and stay true, because every guardrail is a contract with one specific model, and a model you do not control can void that contract overnight without telling you. The proposal is to build the stack that turns all three kinds of openness into a certifiable autonomy component, and to measure what that assurance actually costs in throughput, latency and watts.</p>
 
     <div class="byline">
       <span><b>Circulated by</b> Binh Nguyen</span>
@@ -513,7 +547,7 @@
     <div class="marker">01<span>Why NVIDIA</span></div>
     <div>
       <h2>The open-weight push is a hardware demand strategy, and physical AI is where it stalls</h2>
-      <p>NVIDIA has spent 2026 making the case for open weights from every direction at once: the Nemotron 3 family with published weights and reproducible training recipes, the Nemotron Coalition of external labs, a joint engine with Palantir for training and serving Nemotron entirely inside classified and air-gapped environments, and Isaac GR00T N1.7 with an open reference humanoid for academic research. The logic is direct. Every government, defence prime and industrial operator that vendors its own weights to achieve sovereignty buys its own accelerators to serve them.</p>
+      <p>NVIDIA has spent 2026 making the case for open weights from every direction at once: the Nemotron 3 family with published weights and reproducible training recipes, the Nemotron Coalition of external labs, a joint engine with Palantir for training and serving Nemotron entirely inside classified and air-gapped environments, Isaac GR00T N1.7 with an open reference humanoid for academic research, and the training corpora themselves, from Nemotron-CC through to the Physical AI robotics datasets. The logic is direct. Every government, defence prime and industrial operator that vendors its own weights to achieve sovereignty buys its own accelerators to serve them.</p>
       <p>That logic runs into a wall in physical AI. A sovereign operator can host a model easily enough, but it cannot certify a robot around it. What gates deployment in mining, agriculture, defence and orbital servicing is not model quality, which is already adequate; it is the absence of an assurance argument that a safety regulator, an insurer or a mission authority will accept. Nobody has built the stack that converts open weights into that argument. Doing so is a research contribution, and it happens to unlock exactly the market segment the open-model strategy is aimed at.</p>
     </div>
   </section>
@@ -547,7 +581,34 @@
   </section>
 
   <section class="clause">
-    <div class="marker">03<span>Architecture</span></div>
+    <div class="marker">03<span>Definitions</span></div>
+    <div>
+      <h2>Three kinds of openness, and the different guarantee each one buys</h2>
+      <p>"Open model" gets used loosely, and the looseness costs us the argument. The three axes are separable, they are not equally available from any given vendor, and each unlocks a different part of the safety case. A checkpoint published without its modeling code is inert. Weights and architecture without the data leave every benchmark claim unfalsifiable. NVIDIA is now unusual in shipping all three, which is the opening.</p>
+      <div class="triad">
+        <div class="ax">
+          <div class="axname">Open weights</div>
+          <div class="axsub">a checkpoint you can hold still</div>
+        </div>
+        <div class="axbody"><p>Hash-pinnable parameters, token-level scores and internal activations. This is what makes an activation probe, a conformal quantile calibrated on real logits, and an exact replay of a past decision possible at all. Behind a closed endpoint none of the three has a stable referent.</p></div>
+
+        <div class="ax">
+          <div class="axname">Open architecture</div>
+          <div class="axsub">a graph you can modify</div>
+        </div>
+        <div class="axbody"><p>The modeling code, the kernels and the compilation path. <b>Determinism lives on this axis, not on the weights:</b> batch-invariant inference means replacing the RMSNorm, matmul and attention kernels, which cannot be done inside a graph you cannot see. The same access decides which layer a probe reads, whether a TensorRT engine can be built, whether a safety head can be grafted on, and whether the model can be audited for a backdoor at all. Weights without architecture are an inert blob.</p></div>
+
+        <div class="ax">
+          <div class="axname">Open data</div>
+          <div class="axsub">a training distribution you can interrogate</div>
+        </div>
+        <div class="axbody"><p>NVIDIA now publishes the corpora as well: Nemotron-CC-v2 at 9.13T web tokens, 1.09T curated code tokens and 133.3B math tokens, alongside the Physical AI robotics sets, whose GR00T cross-embodiment and Unitree G1 teleoperation data are past ten million downloads and CC BY 4.0 in part. For assurance this buys three things no closed corpus can: a falsification suite you can <b>prove</b> is not in the training set, which is the whole difference between a benchmark and a marketing number; an evidence-based answer to whether a deployment scenario is in distribution, which is precisely what conformal prediction's exchangeability assumption demands; and a provenance record of what the robot learned from, which is the first thing a regulator asks for.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="marker">04<span>Architecture</span></div>
     <div>
       <h2>Four layers, each one a published technique we would harden and connect</h2>
 
@@ -562,7 +623,7 @@
             <div class="tag">L0 &middot; PIN<span>substrate</span></div>
             <div>
               <h3>Reproducible inference</h3>
-              <p>Checkpoint hash, quantisation recipe, batch-invariant kernels, fixed seeds and recorded sensor tape, treated as one versioned unit. The deliverable is a conformance test that replays a tape and fails loudly on any substrate change, so a silent regression becomes a build failure rather than a field incident.</p>
+              <p>The pin spans all three axes at once: checkpoint hash, kernel and quantisation recipe, and the calibration split drawn from the open corpus, versioned as one unit alongside fixed seeds and a recorded sensor tape. The deliverable is a conformance test that replays a tape and fails loudly on any substrate change, so a silent regression becomes a build failure rather than a field incident.</p>
             </div>
             <div class="kit"><b>NVIDIA</b>Nemotron 3 Nano / Super &middot; Cosmos Reason &middot; Isaac GR00T N1.7 &middot; NIM &middot; TensorRT-LLM &middot; Dynamo &middot; Jetson Thor</div>
           </div>
@@ -599,12 +660,12 @@
   </section>
 
   <section class="clause">
-    <div class="marker">04<span>Contribution</span></div>
+    <div class="marker">05<span>Contribution</span></div>
     <div>
       <h2>Four questions the literature has not answered</h2>
       <div class="qlist">
-        <div class="q"><div class="qn">Q1</div><p><b>What is the validity domain of a guardrail?</b> Given a certificate calibrated on one <span class="term">(weights, quantisation, kernels)</span> triple, how does it degrade under post-training quantisation, LoRA adaptation and full fine-tuning? Staleness has now been benchmarked for text monitors. Nothing equivalent exists for embodied action, where the failure lands in the physical world.</p></div>
-        <div class="q"><div class="qn">Q2</div><p><b>Does the coverage guarantee survive contact with a field?</b> Conformal prediction assumes exchangeability, and deployment breaks it on day one through weather, lighting, wear and novel clutter. What does a defensible coverage claim look like under domain shift on a real robot, and how should the quantile be re-estimated online without discarding the guarantee?</p></div>
+        <div class="q"><div class="qn">Q1</div><p><b>What is the validity domain of a guardrail?</b> Given a certificate calibrated on one <span class="term">(weights, quantisation, kernels)</span> triple, how does it degrade under post-training quantisation, LoRA adaptation and full fine-tuning? Staleness has now been benchmarked for text monitors. Nothing equivalent exists for embodied action, where the failure lands in the physical world. Open recipes and open corpora make the study causal rather than observational: we can reproduce the update ourselves instead of inferring what changed.</p></div>
+        <div class="q"><div class="qn">Q2</div><p><b>Does the coverage guarantee survive contact with a field?</b> Conformal prediction assumes exchangeability, and deployment breaks it on day one through weather, lighting, wear and novel clutter. What does a defensible coverage claim look like under domain shift on a real robot, and how should the quantile be re-estimated online without discarding the guarantee? Published training data turns the shift from an assumption into a measurement.</p></div>
         <div class="q"><div class="qn">Q3</div><p><b>Where is the safety-latency frontier?</b> Closed-loop monitoring consumes exactly the milliseconds in which the collision it is preventing would occur, so a slow guardrail can cause the harm it was installed to stop. This trade-off is acknowledged in the VLA safety literature<sup class="ref">9</sup> and rarely quantified. We would map it on Thor-class edge silicon.</p></div>
         <div class="q"><div class="qn">Q4</div><p><b>What does assurance cost?</b> Total overhead in throughput, watts and dollars of running deterministic inference plus four guardrail layers at the edge. Publishing that number honestly is the rigorous version of the claim that trustworthy physical AI needs more compute, not less.</p></div>
       </div>
@@ -612,21 +673,21 @@
   </section>
 
   <section class="clause">
-    <div class="marker">05<span>The ask</span></div>
+    <div class="marker">06<span>The ask</span></div>
     <div>
       <h2>Resources and outputs</h2>
       <div class="ask">
         <div><b>Edge</b><p>2 &times; Jetson Thor, one deployed and one as a development twin, for L0 to L3 running in the real control loop.</p></div>
         <div><b>Workstation</b><p>DGX Spark or RTX PRO 6000 Blackwell for pinned local inference with batch-invariant kernels.</p></div>
         <div><b>Cloud</b><p>A100 hours, dominated by Q1: the full guardrail set must be retrained and revalidated across every model variant, not run once per model.</p></div>
-        <div><b>Models</b><p>Nemotron 3, Cosmos Reason and Isaac GR00T N1.7, used as pinned open checkpoints rather than endpoints.</p></div>
+        <div><b>Models and data</b><p>Nemotron 3, Cosmos Reason and Isaac GR00T N1.7 as pinned open checkpoints, with the Nemotron and Physical AI corpora as the contamination reference.</p></div>
       </div>
       <p>Outputs we would commit to: an open-source reference stack; a public benchmark for guardrail durability under model updates in embodied settings, which does not currently exist in any form; two conference submissions; and a written reference safety case in a form an operator could actually put in front of a regulator. The last of these is the artifact NVIDIA's sovereign-AI customers are missing, and it is cheap for us to produce alongside the code.</p>
     </div>
   </section>
 
   <section class="clause">
-    <div class="marker">06<span>For the group</span></div>
+    <div class="marker">07<span>For the group</span></div>
     <div>
       <h2>What I want argued about before this is written up</h2>
       <ul class="discuss">

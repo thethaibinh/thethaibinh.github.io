@@ -7,7 +7,7 @@ categories: news
 tags: research VLM navigation safety drones ACRA
 ---
 
-Our paper ***Fly-by-Voice: Vision Language Model Guided Autonomous Navigation with Deterministic Safety*** has been accepted for presentation at the **28th Australasian Conference on Robotics and Automation (ACRA 2026)**, hosted by the Australian Robotics & Automation Association at the **University of Canberra**, 30 November to 2 December 2026.
+Our paper ***Fly-by-Voice: Vision Language Model Guided Autonomous Navigation with Deterministic Safety*** has been accepted for presentation at the **28th Australasian Conference on Robotics and Automation (ACRA 2026)**, hosted by the Australian Robotics & Automation Association at the **University of Canberra**, 30 November to 2 December 2026. The authors are **Binh Nguyen** (first author), Darcy Byrne, Kathryn Kasmarik and Matthew Garratt, all of the University of New South Wales.
 
 [Fly-by-Voice]({% post_url 2026-01-31-vlm-guided-navigation %}) lets a quadrotor fly to goals given in natural language, such as *"Fly to the green barrel!"*, while guaranteeing safe navigation through cluttered environments, all demonstrated in real flight tests.
 

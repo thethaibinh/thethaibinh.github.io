@@ -16,14 +16,10 @@ Leading system development for a decentralised drone swarm framework for [Defenc
 - Led **cross-discipline system integration** across embedded software, hardware, sensor payloads, localisation systems, and communication links, identifying failure modes and subsystem interaction issues through structured ground and flight testing
 - Designed swarm testing scenarios and validation procedures, operational safety protocols, and human-swarm interaction interfaces; mentoring engineers on simulation and validation workflows
 - Designed, procured, built, and successfully flight-tested a complete experimental quadrotor platform from scratch within three months at UNSW Canberra, demonstrating rapid iterative build-test-refine cycles. 
-<figure>
-    <img src="/assets/img/posts/brotor-330.jpg" alt="Brotor-330 quadrotor platform" />
-    <figcaption>Brotor-330 quadrotor platform</figcaption>
-</figure>
 
 <figure>
-    <img src="/assets/img/posts/fleet.jpg" alt="The Brotor-330 fleet" />
-    <figcaption>The Brotor-330 fleet</figcaption>
+    <img src="/assets/img/posts/fleet.jpg" alt="The swarming quadrotor fleet" />
+    <figcaption>The swarming quadrotor fleet</figcaption>
 </figure>
 
 Successfully conducted [first indoor flight test](https://photos.app.goo.gl/BL7h5QvRR5yT7uMg8) and deployed in [Fly-by-Voice framework]({% post_url 2026-01-31-vlm-guided-navigation %}).

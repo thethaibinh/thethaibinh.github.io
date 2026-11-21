@@ -18,7 +18,7 @@ The first and only indoor flight facility at Federation University, established 
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
     <img src="/assets/img/posts/brotor/lab-workbench-1.jpg" alt="Lab workbench" />
-    <img src="/assets/img/posts/brotor/lab-workbench-2.jpg" alt="Lab workbench — electronics" />
+    <img src="/assets/img/posts/brotor/lab-workbench-2.jpg" alt="Lab workbench, electronics" />
     <img src="/assets/img/posts/brotor/lab-flight-area.jpg" alt="Lab flight area" />
     <img src="/assets/img/posts/brotor/lab-testing.jpg" alt="Lab testing" />
 </div>
@@ -35,6 +35,6 @@ Named by combining "Bro" (from Brother) and "tor" (from quadrotor), Brotor repre
 
 - [Flight videos](https://photos.app.goo.gl/XgFSQTj97tsdTZtZ7)
 
-## Brotor 330 - Successor for swarming research
+## Brotor 330, the successor
 
 ![Brotor 330](/assets/img/posts/brotor-330.jpg)

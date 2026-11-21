@@ -86,3 +86,7 @@ social_media:
   airlab: https://air-cbr.github.io/team.html
 
 # No link cards or repositories on homepage
+
+exclude:
+  - CLAUDE.md
+  - watermark.py

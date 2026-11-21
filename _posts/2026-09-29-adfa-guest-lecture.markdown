@@ -17,4 +17,14 @@ The lecture, ***From Root Locus to Rotors: How a Canberra autopilot flies a mill
     <figcaption>From Root Locus to Rotors: how a Canberra autopilot flies a million aircraft</figcaption>
 </figure>
 
+<figure>
+    <img src="/assets/img/posts/adfa-guest-lecture/lecture-hall-portrait.jpg" alt="Binh Nguyen at the lectern of the lecture theatre, with the title slide and the UNSW Canberra crest on the two screens above" />
+    <figcaption>At the lectern in the UNSW Canberra lecture theatre</figcaption>
+</figure>
+
+<figure>
+    <img src="/assets/img/posts/adfa-guest-lecture/lecture-hall-wide.jpg" alt="Wide view of the lecture theatre, with the title slide and the UNSW Canberra crest on the two screens" />
+    <figcaption>The title slide beside the UNSW Canberra crest</figcaption>
+</figure>
+
 An honour to bring this expertise to strengthening Australia's sovereign defence capability.

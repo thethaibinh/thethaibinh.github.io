@@ -20,7 +20,7 @@ Full list also available on [ORCID](https://orcid.org/0000-0003-2942-9014){:targ
 
 ### Conference Papers
 
-**[2]** **B. Nguyen**, D. Byrne, K. Kasmarik, and M. Garratt, "Fly-by-Voice: Vision Language Model Guided Autonomous Navigation with Deterministic Safety," ***Proc. 2026 Australasian Conf. Robotics and Automation (ACRA)***, Canberra, Australia, Dec. 2026. (Accepted.)
+**[2]** **B. Nguyen**, D. Byrne, K. Kasmarik, and M. Garratt, "Fly-by-Voice: Vision Language Model Guided Autonomous Navigation with Deterministic Safety," ***Proc. 2026 Australasian Conf. Robotics and Automation (ACRA)***, Canberra, Australia, Dec. 2026. ([Accepted for presentation](https://www.araa.asn.au/wp-content/uploads/2026/06/ACRA2026_Conference_Program-1.pdf){:target="_blank"}).
 [:newspaper: News]({% post_url 2026-11-21-acra-2026-fly-by-voice %})
 
 Introduced Fly-by-Voice: a vision language model sets the drone's goal from a spoken command, and a planner flies there with deterministic safety. It has flown in real flight tests.
